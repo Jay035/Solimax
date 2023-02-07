@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import navLogo from "../../components/assets/icons/nav-logo.svg";
 import { GlobalAuth } from "../../context/GlobalContext";
-import HamburgerIcon from "./HamburgerIcon";
-import NavButton from "./NavButton";
-import NavMenuList from "./NavMenuList";
+import HamburgerIcon from "../Navbar/HamburgerIcon";
+import NavButton from "../Navbar/NavButton";
+import NavMenuList from "../Navbar/NavMenuList";
 
 export default function HomeNavbar() {
   const { menuItems, menuState } = GlobalAuth();
@@ -18,15 +18,15 @@ export default function HomeNavbar() {
         {/* MENU */}
         <ul class={`menu ${menuState ? `active` : ``}`}>
           {menuItems.map((item) => [<NavMenuList item={item} />])}
-          <button id="mobile-btn">
+          <div className="btn" id="mobile-btn">
 
           <NavButton value="SLM LaunchPad" />
-          </button>
+          </div>
         </ul>
       </nav>
-      <button id="desktop-btn">
+      <div className="btn" id="desktop-btn">
         <NavButton value="SLM LaunchPad" />
-      </button>
+      </div>
 
       {/* MENU ICON */}
       <HamburgerIcon />

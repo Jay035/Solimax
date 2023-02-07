@@ -1,8 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { GlobalAuth } from "../../context/GlobalContext";
 
 export default function NavMenuList({item}) {
   const { setCheckboxState, setMenuState } = GlobalAuth();
+  
   return (
     <li
       class="menu-item"
@@ -11,7 +13,7 @@ export default function NavMenuList({item}) {
         setCheckboxState((prevState) => !prevState);
       }}
     >
-      <a href={item.href}>{item.title}</a>
+      <NavLink to={item.href}>{item.title}</NavLink>
     </li>
   );
 }

@@ -9,7 +9,7 @@ export default function HomeNavbar() {
   const { menuItems, menuState } = GlobalAuth();
 
   return (
-    <header>
+    <header id="launchpad-header">
       <Link to="/">
         <img class="nav-logo" src={navLogo} alt="logo" />
       </Link>
@@ -18,15 +18,14 @@ export default function HomeNavbar() {
         {/* MENU */}
         <ul class={`menu ${menuState ? `active` : ``}`}>
           {menuItems.map((item) => [<NavMenuList item={item} />])}
-          <button id="mobile-btn">
-
-          <NavButton value="Connect Wallet" />
-          </button>
+          <div className="btn" id="mobile-btn">
+            <NavButton value="Connect Wallet" />
+          </div>
         </ul>
       </nav>
-      <button id="desktop-btn">
+      <div className="btn" id="desktop-btn">
         <NavButton value="Connect Wallet" />
-      </button>
+      </div>
 
       {/* MENU ICON */}
       <HamburgerIcon />
