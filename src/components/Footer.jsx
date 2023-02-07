@@ -1,3 +1,6 @@
+import footerLogo from '../components/assets/icons/footer-logo.svg';
+import twitterLogo from '../components/assets/icons/twitter.svg';
+import telegramLogo from '../components/assets/icons/telegram.svg';
 
 export default function Footer() {
   return (
@@ -5,7 +8,7 @@ export default function Footer() {
         {/* footer Logo */}
         <img
           class="footer-logo"
-          src="./assets/icons/footer-logo.svg"
+          src={footerLogo}
           alt="footer logo"
         />
         {/* NAV LINKS */}
@@ -21,12 +24,12 @@ export default function Footer() {
         <div class="social-media-links">
           {/* TWITTER */}
           <a href="https://twitter.com/solimax_?s=21&t=9kRJw2sM-LP9OHpM9DIrrA"
-            ><img src="./assets/icons/twitter.svg" alt="twitter logo"
+            ><img src={twitterLogo} alt="twitter logo"
           /></a>
 
           {/* TELEGRAM */}
           <a href="https://t.me/SoliMax_Official"
-            ><img src="./assets/icons/telegram.svg" alt="telegram logo"
+            ><img src={telegramLogo} alt="telegram logo"
           /></a>
         </div>
       </footer>

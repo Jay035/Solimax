@@ -30,8 +30,8 @@ export default function ContractAddress() {
           Copy Contract Address
           <img src="./assets/icons/copy-icon.svg" alt="copy icon" />
         </button>
-        <div class={`message success-message hidden`}>Copied to clipboard</div>
-        <div class={`message error-message hidden`}>Error !</div>
+        <div class={`message success-message ${successMessageState ? `` : `hidden`}`}>Copied to clipboard</div>
+        <div class={`message error-message ${errorMessageState ? `` : `hidden`}`}>Error !</div>
       </section>
   )
 }

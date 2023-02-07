@@ -1,9 +1,12 @@
+import heroBg from '../../components/assets/images/hero-frame.png';
+import arrowRight from '../../components/assets/icons/arrow-right.svg';
+
 export default function HeroSection() {
   return (
     <section class="hero-section">
       <img
         class="hero-bg"
-        src="./assets/images/hero-frame.png"
+        src={heroBg}
         alt="hero background"
       />
       <div class="img-overlay"></div>
@@ -24,7 +27,7 @@ export default function HeroSection() {
             href="https://equalizer.exchange/swap/?outputCurrency=0x39263a476aadf768be43a99b24c4e461098524a4"
           >
             Buy SLM Now
-            <img src="./assets//icons/arrow-right.svg" alt="arrow-right" />
+            <img src={arrowRight} alt="arrow-right" />
           </a>
         </button>
       </div>

@@ -1,19 +1,26 @@
-import AboutUs from "../components/AboutUs";
-import HeroSection from "../components/HeroSection";
-import HowToBuy from "../components/HowToBuy";
-import Mission from "../components/Mission";
-import Roadmap from "../components/Roadmap";
-import Tokenomics from "../components/Tokenomics";
+import AboutUs from "../components/Home/AboutUs";
+import HeroSection from "../components/Home/HeroSection";
+import HowToBuy from "../components/Home/HowToBuy";
+import Mission from "../components/Home/Mission";
+import HomeNavbar from "../components/Navbar/HomeNavbar";
+import Roadmap from "../components/Home/Roadmap";
+import Tokenomics from "../components/Home/Tokenomics";
 
 export default function Home() {
   return (
-    <main id="main" class="hidden">
-      <HeroSection />
-      <AboutUs />
-      <Mission />
-      <Tokenomics />
-      <Roadmap />
-      <HowToBuy />
-    </main>
+    <>
+    <HomeNavbar />
+      <main
+        id="main"
+        // class="hidden"
+      >
+        <HeroSection />
+        <AboutUs />
+        <Mission />
+        <Tokenomics />
+        <Roadmap />
+        <HowToBuy />
+      </main>
+    </>
   );
 }

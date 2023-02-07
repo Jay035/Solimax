@@ -1,9 +1,12 @@
+import missionBg from '../../components/assets/images/mission-bg.svg';
+import missionAsset from '../../components/assets/images/asset2.png';
+
 export default function Mission() {
   return (
     <section class="our-mission">
       <img
         class="mission-bg"
-        src="./assets/images/mission-bg.svg"
+        src={missionBg}
         alt="mission background"
       />
       <div class="container">
@@ -37,7 +40,7 @@ export default function Mission() {
           </div>
           <img
             class="mission-asset"
-            src="./assets/images/asset2.png"
+            src={missionAsset}
             alt="our mission pics"
           />
         </div>
