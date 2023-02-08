@@ -330,14 +330,14 @@ section {
   left: 50%;
   padding-block: 225px 110px;
   transform: translateX(-50%);
-  
+
   width: 100%;
   text-align: center;
   padding-inline: var(--padding);
 }
 
 .hero-container,
-.hero-container .left-col{
+.hero-container .left-col {
   display: grid;
   place-items: center;
   /* flex-direction: column; */
@@ -784,12 +784,17 @@ footer a {
 
 .social-media-links img {
   width: 24px;
+  transform: none;
 }
 
 /* -------------------------------------------------------------- */
 /* LAUNCHPAD PAGE */
 .launchpad .hero-section {
   height: 1100px;
+}
+
+.launchpad .hero-img{
+  width: 100%;
 }
 
 .launchpad .right-col img {
@@ -823,7 +828,7 @@ footer a {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  padding-top: 47px;
+  padding-block: 47px 74.1px;
 }
 
 .pools-btns a {
@@ -842,6 +847,150 @@ footer a {
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
   );
+}
+
+.launchpad .pools .container{
+  display: grid;
+  gap: 32px;
+  width: 100%;
+}
+
+.launchpad .pool-box {
+  position: relative;
+  /* background: url("../src/components/assets/icons/Strokes.svg") no-repeat; */
+  /* background-size: cover; */
+  height: 573px;
+  width: 100%;
+  display: flex;
+}
+
+.launchpad .pool-container{
+  /* overflow-x: hidden; */
+  width: 100%;
+}
+
+.pool-box .box {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 81%;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.pool-box .logo {
+  /* margin-top: 32.7px; */
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.03);
+  border: 0.961652px solid #374151;
+}
+
+.pool-box .box .logo-tag-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 26.36px auto 30.61px;
+}
+
+.logo-tag-component .tags {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  gap: 7.7px;
+}
+
+.logo-tag-component .tags span {
+  background: linear-gradient(
+    106.23deg,
+    rgba(0, 255, 255, 0.1) 221.75%,
+    rgba(98, 209, 255, 0.1) 308.55%
+  );
+  border: 0.480826px solid #42e8e0;
+  border-radius: 38.4661px;
+  color: #e5e7eb;
+  letter-spacing: -0.02em;
+  padding: 6.73px 12.5px;
+}
+
+.project-details {
+  margin-left: 20px;
+}
+
+.pool-box .project-details h1 {
+  font-weight: 500;
+  font-size: 17.3097px;
+  line-height: 97px;
+  color: #f3f4f6;
+  letter-spacing: -0.02em;
+}
+
+.pool-box .project-details p,
+.project-details a {
+  font-weight: 300;
+  font-size: 11.5398px;
+  line-height: 21px;
+  color: #d1d5db;
+}
+
+.project-details a {
+  color: #1592ca;
+  text-decoration: underline;
+}
+
+.allocation-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 31.73px;
+  /* gap: 61.57px; */
+}
+
+.allocation-group div {
+  display: flex;
+  flex-direction: column;
+  gap: 7.87px;
+}
+
+.allocation-group div p {
+  font-weight: 300;
+  font-size: 10.5782px;
+  line-height: 13px;
+  color: #e5e7eb;
+}
+
+.allocation-group div h1 {
+  font-weight: 500;
+  font-size: 15.3864px;
+  line-height: 19px;
+  color: #f3f4f6;
+}
+
+.allocation-group div h1,
+.allocation-group div p,
+.buy-presale-btn {
+  letter-spacing: -0.005em;
+}
+
+.buy-presale-btn {
+  background: #08272f;
+  border: 1px solid #2166ae;
+  display: flex;
+  justify-content: center;
+  padding-block: 13.5px;
+  align-items: center;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  width: 100%;
+  margin-top: 16px;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 /* ------------------------------------------------------- */
@@ -991,6 +1140,11 @@ footer a {
   .message {
     font-size: 1.1rem;
   }
+
+  .launchpad .pools .container{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
 }
 
 /* LAPTOP SCREENS */
@@ -1132,17 +1286,17 @@ footer a {
   .launchpad .hero-section {
     height: 814px;
   }
-  
-  .launchpad .hero-container{
+
+  .launchpad .hero-container {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .launchpad .hero-container .left-col{
+  .launchpad .hero-container .left-col {
     place-items: start;
     text-align: left;
   }
 
-  .launchpad .hero-container .right-col img{
+  .launchpad .hero-container .right-col img {
     width: 587px;
   }
 

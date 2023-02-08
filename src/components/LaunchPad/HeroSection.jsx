@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section class="hero-section">
       <img
-        // class="hero-bg"
+        class="hero-bg"
         src={heroBg}
         alt="hero background"
       />
