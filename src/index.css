@@ -212,7 +212,7 @@ nav a.active::after {
   margin-top: 2rem;
 }
 
-.menu .nav-btn {
+.nav-btn {
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -793,7 +793,7 @@ footer a {
   height: 1100px;
 }
 
-.launchpad .hero-img{
+.launchpad .hero-section .bg{
   width: 100%;
 }
 
@@ -849,32 +849,40 @@ footer a {
   );
 }
 
-.launchpad .pools .container{
+.launchpad .pools .container {
   display: grid;
   gap: 32px;
   width: 100%;
+  /* max-width: 100%; */
+}
+
+.launchpad .card-border {
+  width: 100%;
+  height: 100%;
 }
 
 .launchpad .pool-box {
   position: relative;
-  /* background: url("../src/components/assets/icons/Strokes.svg") no-repeat; */
-  /* background-size: cover; */
+  background: url("../src/components/assets/icons/Strokes.svg") no-repeat;
+  background-size: cover;
   height: 573px;
   width: 100%;
-  display: flex;
+  /* display: flex; */
 }
 
-.launchpad .pool-container{
-  /* overflow-x: hidden; */
+.launchpad .pool-container {
   width: 100%;
+  position: relative;
 }
 
 .pool-box .box {
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 81%;
+  /* position: absolute; */
+  /* top: 59%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  /* height: 573px; */
+  /* padding-block: 30px; */
   /* display: flex;
   flex-direction: column; */
 }
@@ -892,9 +900,11 @@ footer a {
 
 .pool-box .box .logo-tag-component {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  /* align-items: center; */
   justify-content: space-between;
-  margin: 26.36px auto 30.61px;
+  margin: 20px auto;
 }
 
 .logo-tag-component .tags {
@@ -905,6 +915,7 @@ footer a {
 }
 
 .logo-tag-component .tags span {
+  text-align: center;
   background: linear-gradient(
     106.23deg,
     rgba(0, 255, 255, 0.1) 221.75%,
@@ -923,8 +934,8 @@ footer a {
 
 .pool-box .project-details h1 {
   font-weight: 500;
-  font-size: 17.3097px;
-  line-height: 97px;
+  font-size: 17px;
+  line-height: 30px;
   color: #f3f4f6;
   letter-spacing: -0.02em;
 }
@@ -1141,9 +1152,27 @@ footer a {
     font-size: 1.1rem;
   }
 
-  .launchpad .pools .container{
+  /* LAUNCHPAD  */
+
+  .launchpad .pools .container {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+  }
+
+  .pool-box .box {
+    top: 50%;
+  }
+
+  .pool-box .box .logo-tag-component {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 26.36px auto 30.61px;
+  }
+
+  .pool-box .project-details h1 {
+    font-size: 17.3097px;
+    line-height: 97px;
   }
 }
 
@@ -1354,6 +1383,11 @@ footer a {
 
   #how-to-buy .card.step-four {
     padding-right: 154px;
+  }
+
+  .launchpad .pools .container {
+    grid-template-columns: repeat(3, 1fr);
+    /* padding: 2rem; */
   }
 }
 

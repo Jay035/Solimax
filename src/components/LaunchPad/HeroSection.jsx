@@ -1,12 +1,13 @@
 import arrowRight from "../assets/icons/arrow-right.svg";
 import heroImg from "../assets/images/launchpad/hero-img.png";
 import heroBg from "../assets/images/launchpad/hero-frame.png";
+import dash from '../assets/icons/launchpad-hero-section-dash.png';
 
 export default function HeroSection() {
   return (
     <section class="hero-section">
       <img
-        class="hero-bg"
+        class="bg"
         src={heroBg}
         alt="hero background"
       />
@@ -17,6 +18,7 @@ export default function HeroSection() {
           <h1 class="hero-title">
             A Secure Multi-chain Launch-pad with High Staking
           </h1>
+          <img src={dash} alt="dash" />
           <p>Want to raise funds with SoliMax Launchpad?</p>
           {/* HERO BTN */}
           <button class="hero-btn">

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import dots from "../../assets/icons/launchpad-card-dots.svg";
 import cardBorder from '../../assets/icons/Strokes.svg';
 
@@ -5,7 +6,7 @@ export default function PoolCard({pool}) {
   return (
     <div className="pool-container">
       <div className="pool-box">
-        <img className="card-border" src={cardBorder} alt="" />
+        {/* <img className="card-border" src={cardBorder} alt="" /> */}
         <div className="box">
           <img src={dots} alt="dots" />
           {/* <div className=""> */}
@@ -21,11 +22,9 @@ export default function PoolCard({pool}) {
             </div>
           </div>
           <div className="project-details">
-            <h1>Project 1</h1>
+            <h1>{pool.projectTitle}</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim <a href=""> Read more</a>
+              {pool.projectDescription} <Link to=""> Read more</Link>
             </p>
           </div>
           <div className="allocation-group">
