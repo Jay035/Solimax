@@ -1,3 +1,7 @@
+import connectorLine1 from '../assets//images/Connector line.svg';
+import connectorLine2 from '../assets//images/Connector line-1.svg';
+import connectorLine3 from '../assets//images/Connector line-2.svg';
+
 
 export default function AboutUs() {
   return (
@@ -7,19 +11,19 @@ export default function AboutUs() {
         <img
           id="connector-line-1"
           class="connector-line"
-          src="./assets/images/Connector line.svg"
+          src={connectorLine1}
           alt="Connector line 1"
         />
         <img
           id="connector-line-2"
           class="connector-line"
-          src="./assets/images/Connector line-1.svg"
+          src={connectorLine2}
           alt="Connector line 2"
         />
         <img
           id="connector-line-3"
           class="connector-line"
-          src="./assets/images/Connector line-2.svg"
+          src={connectorLine3}
           alt="Connector line 3"
         />
 

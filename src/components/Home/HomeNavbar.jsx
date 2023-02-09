@@ -20,12 +20,12 @@ export default function HomeNavbar() {
           {menuItems.map((item) => [<NavMenuList item={item} />])}
           <div className="btn" id="mobile-btn">
 
-          <NavButton value="SLM LaunchPad" />
+          <NavButton link="/launchpad" value="SLM LaunchPad" />
           </div>
         </ul>
       </nav>
       <div className="btn" id="desktop-btn">
-        <NavButton value="SLM LaunchPad" />
+        <NavButton link="/launchpad" value="SLM LaunchPad" />
       </div>
 
       {/* MENU ICON */}

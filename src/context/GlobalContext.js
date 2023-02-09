@@ -1,6 +1,8 @@
 import { useContext } from "react";
+import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
+import { ActivePools, CompletedPools, UpcomingPools } from "../components/LaunchPad/Pools/PoolsData";
 
 const GlobalContext = createContext();
 
@@ -33,6 +35,24 @@ export function GlobalContextProvider({ children }) {
       href: "#contact",
     },
   ];
+
+  const [poolsData, setPoolsData] = useState([]);
+  const [selectedPool, setSelectedPool] = useState('active');
+
+  useEffect(() => {
+    switch(selectedPool){
+      case "active":
+        setPoolsData(ActivePools);
+        break;
+      case "upcoming":
+        setPoolsData(UpcomingPools);
+        break;
+      case "completed":
+        setPoolsData(CompletedPools);
+        break;
+    }
+    // setPoolsData(activePools);
+  }, [selectedPool])
   //   console.log(menuItems)
 
   return (
@@ -43,6 +63,9 @@ export function GlobalContextProvider({ children }) {
         menuItems,
         setMenuState,
         setCheckboxState,
+        poolsData,
+        selectedPool,
+        setSelectedPool
       }}
     >
       {children}

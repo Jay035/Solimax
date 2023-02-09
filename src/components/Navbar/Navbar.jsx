@@ -5,7 +5,7 @@ import HamburgerIcon from "./HamburgerIcon";
 import NavButton from "./NavButton";
 import NavMenuList from "./NavMenuList";
 
-export default function HomeNavbar() {
+export default function Navbar() {
   const { menuItems, menuState } = GlobalAuth();
 
   return (
@@ -19,12 +19,12 @@ export default function HomeNavbar() {
         <ul class={`menu ${menuState ? `active` : ``}`}>
           {menuItems.map((item) => [<NavMenuList item={item} />])}
           <div className="btn" id="mobile-btn">
-            <NavButton value="Connect Wallet" />
+            <NavButton link="" value="Connect Wallet" />
           </div>
         </ul>
       </nav>
       <div className="btn" id="desktop-btn">
-        <NavButton value="Connect Wallet" />
+        <NavButton link="" value="Connect Wallet" />
       </div>
 
       {/* MENU ICON */}

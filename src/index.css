@@ -7,6 +7,8 @@
   --card-bg: #d9d9d908;
   --text-color: #9ca3af;
   --menu-text-color: #f9fafb;
+  --card-text-color: #f3f4f6;
+  --card-p-color: #e5e7eb;
 
   --padding: 2rem;
   --margin: 3em;
@@ -689,7 +691,7 @@ section {
   gap: 56px;
   position: relative;
   padding-bottom: 90px;
-  border-bottom: 1px solid #1f2937;
+  /* border-bottom: 1px solid #1f2937; */
 }
 
 .contract-address h1 {
@@ -729,14 +731,6 @@ section {
   font-weight: 300;
 }
 
-/* .success-message{
-  background-color: rgba(0, 128, 0, 0.726);
-}
-
-.error-message{
-  background-color: rgba(255, 0, 0, 0.527);
-} */
-
 /* ------------------------------------------------------- */
 /* FOOTER */
 footer {
@@ -745,6 +739,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 42px;
+  border-top: 1px solid #1f2937;
 }
 
 .footer-logo {
@@ -793,7 +788,7 @@ footer a {
   height: 1100px;
 }
 
-.launchpad .hero-section .bg{
+.launchpad .hero-section .bg {
   width: 100%;
 }
 
@@ -971,20 +966,50 @@ footer a {
   font-weight: 300;
   font-size: 10.5782px;
   line-height: 13px;
-  color: #e5e7eb;
+  color: var(--card-p-color);
 }
 
 .allocation-group div h1 {
   font-weight: 500;
   font-size: 15.3864px;
   line-height: 19px;
-  color: #f3f4f6;
+  color: var(--card-text-color);
 }
 
 .allocation-group div h1,
 .allocation-group div p,
-.buy-presale-btn {
+.percentage-bar h1,
+.percentage-bar p,
+.buy-presale-btn,
+.details h1,
+.details h2,
+.details p {
   letter-spacing: -0.005em;
+}
+
+.percentage-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 29.13px;
+}
+
+.percentage-bar > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+
+.percentage-bar > div h1 {
+  color: var(--card-text-color);
+}
+
+.percentage-bar p {
+  color: var(--card-p-color);
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 11px;
 }
 
 .buy-presale-btn {
@@ -1003,6 +1028,140 @@ footer a {
   /* position: absolute;
   bottom: 0; */
 }
+
+/* PAGINATION */
+.paginationBtns {
+  width: 140px;
+  /* height: 60px; */
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  /* padding: 1rem; */
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 150px;
+  /* overflow: hidden; */
+}
+
+/* disabled state */
+.paginationDisabled {
+  background: transparent;
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+}
+
+.paginationBtns a {
+  padding: 10px 19px;
+  height: 62px;
+  width: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 50%;
+  border: 1px solid #454fda;
+  color: var(--menu-text-color);
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.nextBtn {
+  background: #454fda;
+}
+
+.paginationBtns a:hover {
+  /* color: #fff; */
+  background: #454fda;
+}
+
+.paginationActive a {
+  background: #454fda;
+  /* color: #fff; */
+}
+
+/* POOL CARD DETAILS PAGE */
+.pool-card-details .hero-section{
+height: 814px;
+}
+
+.bg{
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-icons a {
+  padding: 12px;
+  border-radius: 38.47px;
+  border: 0.48px solid #42e8e0;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.pool-token-information{
+  display: grid;
+  gap: 56px;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 0.7px solid #374151;
+}
+
+.details h1 {
+  width: fit-content;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 28px 32px;
+}
+
+.details .group {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  width: 100%;
+  /* align-items: center; */
+}
+
+.details .group div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+  border: 0.7px solid #374151;
+}
+
+.details h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.details h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.details p{
+  font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+color: #D1D5DB;
+}
+
+
+
+
 
 /* ------------------------------------------------------- */
 /* TABLET SCREEN SIZES */
