@@ -19,7 +19,7 @@ export default function PoolsBtn({item, active}) {
 //     },
 //   ];
   return (
-    <div className="pools-btns">
+    <div key={item.id} className="pools-btn">
       {/* {titles.map((item) => ( */}
         <Link
           id={item.id}

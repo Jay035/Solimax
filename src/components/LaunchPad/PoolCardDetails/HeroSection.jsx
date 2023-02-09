@@ -5,7 +5,9 @@ import radioIcon from "../../assets/icons/radio.svg";
 import webIcon from "../../assets/icons/web.svg";
 import heroBg from "../../assets/images/launchpad/hero-frame.png";
 
-export default function HeroSection() {
+export default function HeroSection({pool}) {
+    console.log(pool[0].id);
+    
   return (
     <section className="hero-section">
         <img
@@ -15,15 +17,11 @@ export default function HeroSection() {
       />
       <div class="hero-container">
         <div className="left-col">
-          <div className="logo">Logo</div>
-          <h1 class="hero-title">Project 1</h1>
+          <div className="logo">{pool[0].logo}</div>
+          <h1 class="hero-title">{pool[0].projectTitle}</h1>
           <img src={dash} alt="dash" />
           <p>
-            Menzy is a passive move-to-earn project with additional features
-            such as compete to earn and activity classification based on machine
-            vision.Menzy is a passive move-to-earn project with additional
-            features such as compete to earn and activity classification based
-            on machine vision.
+            {pool[0].projectDescription}
           </p>
           {/* HERO LOGO LINKS */}
           <div className="social-icons">

@@ -24,7 +24,7 @@ export default function HeroSection() {
           <button class="hero-btn">
             <a
               class="buy-slm-btn"
-              href="https://equalizer.exchange/swap/?outputCurrency=0x39263a476aadf768be43a99b24c4e461098524a4"
+              href="/"
             >
               Apply as a Project
               <img src={arrowRight} alt="arrow-right" />

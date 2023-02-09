@@ -10,6 +10,16 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"]
   },
   {
     id: 2,
@@ -22,6 +32,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 3,
@@ -34,6 +55,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 4,
@@ -46,6 +78,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 5,
@@ -58,6 +101,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 6,
@@ -70,6 +124,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 7,
@@ -82,6 +147,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 8,
@@ -94,6 +170,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 9,
@@ -106,6 +193,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 10,
@@ -118,6 +216,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 11,
@@ -130,6 +239,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 12,
@@ -142,6 +262,17 @@ export const ActivePools = [
     minAllocation: "$10",
     maxAllocation: "$10",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
 ];
 
@@ -157,6 +288,17 @@ export const UpcomingPools = [
     minAllocation: "$10",
     maxAllocation: "$200",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 2,
@@ -169,6 +311,17 @@ export const UpcomingPools = [
     minAllocation: "$10",
     maxAllocation: "$200",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 3,
@@ -181,6 +334,17 @@ export const UpcomingPools = [
     minAllocation: "$10",
     maxAllocation: "$200",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 4,
@@ -193,6 +357,17 @@ export const UpcomingPools = [
     minAllocation: "$10",
     maxAllocation: "$200",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 5,
@@ -205,6 +380,17 @@ export const UpcomingPools = [
     minAllocation: "$10",
     maxAllocation: "$200",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 6,
@@ -217,6 +403,17 @@ export const UpcomingPools = [
     minAllocation: "$10",
     maxAllocation: "$200",
     access: "Public",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
 ];
 
@@ -234,6 +431,17 @@ export const CompletedPools = [
     access: "Public",
     SLMAmount: "87079007.22/87083333.33 SLM",
     percentage: "100.00%",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 2,
@@ -248,6 +456,17 @@ export const CompletedPools = [
     access: "Public",
     SLMAmount: "87079007.22/87083333.33 SLM",
     percentage: "100.00%",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
   {
     id: 3,
@@ -262,5 +481,16 @@ export const CompletedPools = [
     access: "Public",
     SLMAmount: "87079007.22/87083333.33 SLM",
     percentage: "100.00%",
+    tokenDistribution: "24th Dec, 2022 (UTC + 1:00)",
+    tokenPrice: "1 BUSD = 166.66 SLM",
+    tokenName: "SoliMax",
+    tokenSymbol: "SLM",
+    tokenDecimal: "18",
+    tokenAddress: "0xb1957BDbA889686EbdE631DF970ecE6A7571A1B6",
+    tokenTotalSupply: "1,000,000,000",
+    aboutProject:
+      "Menzy is a passive move-to-earn project with additional features such as compete to earn and activity classification based on machine vision. These segments each contain reward mechanisms that grant users MNZ tokens once activated as per the segmentation classes as well as the sub categories. With Menzy’s Move2Earn; you can earn passively by just walking, running and participating in other real world sports and activities. This enables a whole new paradigm for wallets where a wallet can keep increasing total assets over time while still being used for all other utilities: ",
+    projectBenefits: ["1) Showcase your skills and earn income in the form of MNZ Tokens by competing with other holders in different real world physical sports, games and activities. Menzy uses its AI based computer vision software that acts as a referee to assess your performance.", "2) Ensure a healthy living by targeting your daily step count goals on the Menzy application and getting rewarded with MNZ tokens and unique digital assets for maintaining a healthy lifestyle.MENZY ECOSYSTEM"],
+    projectName: "MENZY ECOSYSTEM"
   },
 ];

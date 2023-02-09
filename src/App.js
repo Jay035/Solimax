@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { GlobalContextProvider } from "./context/GlobalContext";
+import ErrorPage from "./pages/ErrorPage";
 import PoolCardDetails from "./pages/PoolCardDetails";
 // const Navbar = lazy(import("./components/Navbar/Navbar"));
 const Home = lazy(() => import("./pages/Home"));
@@ -40,8 +41,10 @@ function App() {
                 element={<Home />}
                 // element={loadingState ? <Loading /> : <Home />}
               />
-              <Route path="launchpad" element={<LaunchPad />} />
-              <Route path="poolcardDetails" element={<PoolCardDetails />} />
+              <Route path="/launchpad" element={<LaunchPad />} />
+              <Route path="/launchpad/pool/:id" element={<PoolCardDetails />} />
+              {/* when a user goes to a non-existent route */}
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
             <Footer />
           </Suspense>

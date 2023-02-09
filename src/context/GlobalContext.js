@@ -50,6 +50,8 @@ export function GlobalContextProvider({ children }) {
       case "completed":
         setPoolsData(CompletedPools);
         break;
+        default:
+          setPoolsData(ActivePools);
     }
     // setPoolsData(activePools);
   }, [selectedPool])

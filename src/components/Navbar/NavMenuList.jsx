@@ -7,7 +7,8 @@ export default function NavMenuList({item}) {
   
   return (
     <li
-      class="menu-item"
+    key={item.id}
+      className="menu-item"
       onClick={() => {
         setMenuState((prevState) => !prevState);
         setCheckboxState((prevState) => !prevState);

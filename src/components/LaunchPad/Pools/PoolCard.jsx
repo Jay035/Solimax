@@ -5,7 +5,7 @@ import percentageBar from "../../assets/icons/percentage-Bar.svg";
 
 export default function PoolCard({ pool }) {
   return (
-    <div className="pool-container">
+    <div key={pool.id} className="pool-container">
       <div className="pool-box">
         {/* <img className="card-border" src={cardBorder} alt="" /> */}
         <div className="box">
@@ -14,15 +14,16 @@ export default function PoolCard({ pool }) {
           <div className="logo-tag-component">
             <div className="logo">{pool?.logo}</div>
             <div className="tags">
-              {pool.tags?.map((tag) => (
-                <span>{tag}</span>
+              {pool.tags?.map((tag, index) => (
+                <span key={index}>{tag}</span>
               ))}
             </div>
           </div>
           <div className="project-details">
             <h1>{pool?.projectTitle}</h1>
             <p>
-              {pool?.projectDescription} <Link to=""> Read more</Link>
+              {pool?.projectDescription}{" "}
+              <Link to={`/launchpad/pool/${pool.id}`}> Read more</Link>
             </p>
           </div>
           <div className="allocation-group">

@@ -232,7 +232,6 @@ nav a.active {
   padding: 12px 25px;
 }
 
-
 #desktop-btn {
   display: none;
 }
@@ -829,6 +828,10 @@ footer a {
   padding-block: 47px 74.1px;
 }
 
+.pools-btns > div{
+  display: flex;
+}
+
 .pools-btns a {
   border: 1px solid #454fda;
   background: transparent;
@@ -1082,11 +1085,11 @@ footer a {
 }
 
 /* POOL CARD DETAILS PAGE */
-.pool-card-details .hero-section{
-height: 814px;
+.pool-card-details .hero-section {
+  height: 814px;
 }
 
-.bg{
+.bg {
   width: 100%;
 }
 
@@ -1107,9 +1110,11 @@ height: 814px;
   height: 24px;
 }
 
-.pool-token-information{
-  display: grid;
+.pool-token-information {
+  display: flex;
+  flex-direction: column;
   gap: 56px;
+  width: 100%;
 }
 
 .details {
@@ -1117,13 +1122,18 @@ height: 814px;
   display: flex;
   flex-direction: column;
   border: 0.7px solid #374151;
+  max-width: 612px;
 }
 
-.details h1 {
+.details h1,
+.about-project h1 {
   width: fit-content;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
+}
+
+.details h1 {
   padding: 28px 32px;
 }
 
@@ -1139,28 +1149,55 @@ height: 814px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  /* width: 100%; */
   padding: 28px 32px;
   border: 0.7px solid #374151;
 }
 
-.details h1 {
+/* .details h1 {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
-}
+} */
 
 .details h2 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 
 .details p{
-  font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-color: #D1D5DB;
+  text-align: right;
+  word-break: break-all;
 }
+
+.details p,
+.about-project p,
+.about-project li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #d1d5db;
+}
+
+.about-project {
+  margin-block: 100px 97px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-project ul{
+  list-style: none;
+}
+
+.about-project p,
+.about-project li{
+  line-height: 31px;
+  color: var(--text-color);
+}
+
 
 
 
@@ -1335,6 +1372,17 @@ color: #D1D5DB;
   .pool-box .project-details h1 {
     font-size: 17.3097px;
     line-height: 97px;
+  }
+
+  .pool-token-information {
+    /* grid-template-columns: repeat(2, 1fr); */
+    flex-direction: row;
+  }
+
+  .details h2 {
+    /* font-weight: 400; */
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 
