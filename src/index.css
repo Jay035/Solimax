@@ -790,9 +790,9 @@ footer a {
   height: 1100px;
 }
 
-.launchpad .hero-section .bg {
+/* .launchpad .hero-section .bg {
   width: 100%;
-}
+} */
 
 .launchpad .right-col img {
   width: 100%;
@@ -1085,12 +1085,16 @@ footer a {
 }
 
 /* POOL CARD DETAILS PAGE */
-.pool-card-details .hero-section {
+.pool-card-details .hero-section,
+.bg {
   height: 814px;
 }
 
 .bg {
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .social-icons {
@@ -1140,7 +1144,7 @@ footer a {
 .details .group {
   display: flex;
   flex-direction: column;
-  /* justify-content: start; */
+  justify-content: center;
   width: 100%;
   /* align-items: center; */
 }
@@ -1352,6 +1356,9 @@ footer a {
   }
 
   /* LAUNCHPAD  */
+  .launchpad .hero-section {
+    height: 1244px;
+  }
 
   .launchpad .pools .container {
     grid-template-columns: repeat(2, 1fr);
@@ -1372,11 +1379,6 @@ footer a {
   .pool-box .project-details h1 {
     font-size: 17.3097px;
     line-height: 97px;
-  }
-
-  .pool-token-information {
-    /* grid-template-columns: repeat(2, 1fr); */
-    flex-direction: row;
   }
 
   .details h2 {
@@ -1508,6 +1510,12 @@ footer a {
 
   .contract-address button {
     font-size: 1.1em;
+  }
+
+
+  .pool-token-information {
+    /* grid-template-columns: repeat(2, 1fr); */
+    flex-direction: row;
   }
 }
 
