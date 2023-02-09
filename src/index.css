@@ -194,7 +194,7 @@ nav a.active {
   position: relative;
 }
 
-nav a.active::after {
+/* nav a.active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -207,7 +207,7 @@ nav a.active::after {
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
   );
-}
+} */
 
 /* Nav button */
 .menu .btn {
@@ -231,6 +231,7 @@ nav a.active::after {
   letter-spacing: -0.18px;
   padding: 12px 25px;
 }
+
 
 #desktop-btn {
   display: none;
@@ -390,6 +391,7 @@ section {
   transition: all 0.5s ease;
 }
 
+.nav-btn:hover,
 .hero-btn:hover {
   background: linear-gradient(
     200deg,
@@ -397,6 +399,7 @@ section {
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
   );
+  color: var(--menu-text-color);
 }
 
 .hero-btn a {
