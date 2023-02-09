@@ -51,7 +51,7 @@ export function GlobalContextProvider({ children }) {
         setPoolsData(CompletedPools);
         break;
         default:
-          setPoolsData(ActivePools);
+          break;
     }
     // setPoolsData(activePools);
   }, [selectedPool])

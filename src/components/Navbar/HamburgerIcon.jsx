@@ -4,7 +4,7 @@ export default function HamburgerIcon() {
     const { checkboxState, setCheckboxState, setMenuState } = GlobalAuth(); 
     
   return (
-    <div class="hamburger">
+    <div className="hamburger">
         <input
           id="input"
           type="checkbox"
@@ -13,6 +13,7 @@ export default function HamburgerIcon() {
             setMenuState((prevState) => !prevState);
             setCheckboxState((prevState) => !prevState);
           }}
+          onChange={() => setCheckboxState((prevState) => !prevState)}
         />
         <span id="span1"></span>
         <span id="span2"></span>

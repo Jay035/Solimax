@@ -122,8 +122,8 @@ a {
   color: var(--menu-text-color);
 }
 
-.menu-item a:hover,
-a:hover {
+/* .menu-item a:hover, */
+/* a:hover {
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -133,7 +133,7 @@ a:hover {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-}
+} */
 
 nav button a:hover {
   color: var(--menu-text-color);
@@ -190,24 +190,39 @@ nav a {
   padding-bottom: 7.5px;
 }
 
-nav a.active {
+ul a[activeclassname="selected"],
+.menu-item a,
+.active{
   position: relative;
+  /* background-color: #fff; */
 }
 
-/* nav a.active::after {
+
+.menu-item a::after,
+.active::after{
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 3px;
-  width: 100%;
+  width: 0px;
+  /* width: 100%; */
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
-  );
-} */
+    );
+  }
+
+  /* .active::after{
+    width: 100% !important;
+  } */
+
+.menu-item a:hover::after,
+.menu-item a:focus::after{
+  width: 100%;
+}
 
 /* Nav button */
 .menu .btn {
@@ -808,11 +823,22 @@ footer a {
   padding: 52px var(--padding);
 }
 
+.launchpad .buy-btns div{
+  background: url("../src/components/assets/icons/buy-btn-border.svg") no-repeat;;
+  padding: 11px 0;
+  width: 222px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
 .launchpad .buy-btn {
-  padding: 13px 25px;
+  padding: 13px 0;
+  width: 193.96px;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  text-align: center;
   color: var(--white);
   background: linear-gradient(
     106.23deg,
@@ -1157,6 +1183,14 @@ footer a {
   /* width: 100%; */
   padding: 28px 32px;
   border: 0.7px solid #374151;
+}
+
+.group .access{
+  border: none !important;
+}
+
+.group .token-address{
+  padding: 18px 32px !important;
 }
 
 /* .details h1 {

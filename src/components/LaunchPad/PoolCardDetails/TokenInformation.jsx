@@ -17,7 +17,7 @@ export default function TokenInformation({pool}) {
           <h2 className="details-title">Decimal</h2>
           <p className="value">{pool[0]?.tokenDecimal}</p>
         </div>
-        <div className="">
+        <div className="token-address">
           <h2 className="details-title">Address</h2>
           <p className="value">{pool[0]?.tokenAddress}</p>
         </div>

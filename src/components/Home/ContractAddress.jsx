@@ -1,4 +1,5 @@
 import { useState } from "react";
+import copyIcon from '../assets/icons/copy-icon.svg';
 
 export default function ContractAddress() {
     const [successMessageState, setSuccessMessageState] = useState(false);
@@ -26,9 +27,9 @@ export default function ContractAddress() {
   return (
     <section class="contract-address">
         <h1>0X39263A476aADF768BE43a99b24C4e461098524a4</h1>
-        <button onclick={copyToClipboard}>
+        <button onClick={copyToClipboard}>
           Copy Contract Address
-          <img src="./assets/icons/copy-icon.svg" alt="copy icon" />
+          <img src={copyIcon} alt="copy icon" />
         </button>
         <div class={`message success-message ${successMessageState ? `` : `hidden`}`}>Copied to clipboard</div>
         <div class={`message error-message ${errorMessageState ? `` : `hidden`}`}>Error !</div>

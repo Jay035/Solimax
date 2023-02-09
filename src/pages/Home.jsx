@@ -5,6 +5,7 @@ import Mission from "../components/Home/Mission";
 import HomeNavbar from "../components/Home/HomeNavbar";
 import Roadmap from "../components/Home/Roadmap";
 import Tokenomics from "../components/Home/Tokenomics";
+import ContractAddress from "../components/Home/ContractAddress";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Tokenomics />
         <Roadmap />
         <HowToBuy />
+        <ContractAddress />
       </main>
     </>
   );
