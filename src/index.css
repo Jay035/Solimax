@@ -843,25 +843,13 @@ footer a {
 }
 
 .launchpad .buy-btn {
-  /* position: absolute;
-  top: 8px; */
-  padding: 13px 0;
-  width: 100%;
-  /* max-width: 190px; */
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: var(--white);
-  /* background: linear-gradient(
-    106.23deg,
-    rgba(0, 255, 255, 0.1) 6.6%,
-    rgba(98, 209, 255, 0.1) 93.4%
-  ); */
   border: 0.5px solid #374151;
 }
-
-/* .b */
 
 @media screen and (min-width: 400px) {
   .launchpad .buy-btn {
