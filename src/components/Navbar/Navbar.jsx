@@ -4,14 +4,7 @@ import { NavHashLink } from "react-router-hash-link";
 import navLogo from "../../components/assets/icons/nav-logo.svg";
 import { GlobalAuth } from "../../context/GlobalContext";
 import HamburgerIcon from "./HamburgerIcon";
-import NavButton from "./NavButton";
-<<<<<<< HEAD
-=======
-import NavMenuList from "./NavMenuList";
-import { ConnectButton } from '@rainbow-me/rainbowkit';
-
-
->>>>>>> 30e8281340d78a5df4ba0429c8eb15218d467078
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Navbar() {
   const { menuState, setCheckboxState, setMenuState } = GlobalAuth();
@@ -113,12 +106,12 @@ export default function Navbar() {
           </li>
 
           <div className="btn" id="mobile-btn">
-          <ConnectButton />
+            <ConnectButton />
           </div>
         </ul>
       </nav>
       <div className="btn" id="desktop-btn">
-      <ConnectButton />
+        <ConnectButton />
       </div>
 
       {/* MENU ICON */}
