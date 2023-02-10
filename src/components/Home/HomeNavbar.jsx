@@ -3,21 +3,21 @@ import navLogo from "../../components/assets/icons/nav-logo.svg";
 import { GlobalAuth } from "../../context/GlobalContext";
 import HamburgerIcon from "../Navbar/HamburgerIcon";
 import NavButton from "../Navbar/NavButton";
-import { NavHashLink } from 'react-router-hash-link';
+import { NavHashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 
 export default function HomeNavbar() {
   const { menuState, setCheckboxState, setMenuState } = GlobalAuth();
- 
+
   return (
     <header>
       <Link to="/">
-        <img class="nav-logo" src={navLogo} alt="logo" />
+        <img className="nav-logo" src={navLogo} alt="logo" />
       </Link>
 
-      <nav class="navbar">
+      <nav className="navbar">
         {/* MENU */}
-        <ul class={`menu ${menuState ? `active` : ``}`}>
+        <ul className={`menu ${menuState ? `active` : ``}`}>
           {/* {menuItems.map((item) => [<NavMenuList item={item} />])} */}
           <li
             className="menu-item"
@@ -26,7 +26,13 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink exact to="/#about-us" activeClassname="selected" smooth>About us</NavHashLink>
+            <NavHashLink
+              to="/#about-us"
+              activeclassname="selected"
+              smooth="true"
+            >
+              About us
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -35,7 +41,13 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#tokenomics" activeClassname="selected" smooth>Tokenomics</NavHashLink>
+            <NavHashLink
+              to="/#tokenomics"
+              activeclassname="selected"
+              smooth="true"
+            >
+              Tokenomics
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -44,7 +56,13 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#roadmap" activeClassname="selected" smooth>Roadmap</NavHashLink>
+            <NavHashLink
+              to="/#roadmap"
+              activeclassname="selected"
+              smooth="true"
+            >
+              Roadmap
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -53,7 +71,9 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavLink to="/launchpad" activeClassname="selected" smooth>Launchpad</NavLink>
+            <NavLink to="/launchpad" activeclassname="selected" smooth="true">
+              Launchpad
+            </NavLink>
           </li>
           <li
             className="menu-item"
@@ -62,7 +82,13 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#how-to-buy" activeClassname="selected" smooth>How to buy</NavHashLink>
+            <NavHashLink
+              to="/#how-to-buy"
+              activeclassname="selected"
+              smooth="true"
+            >
+              How to buy
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -71,7 +97,13 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#contact" activeClassname="selected" smooth>Contact us</NavHashLink>
+            <NavHashLink
+              to="/#contact"
+              activeclassname="selected"
+              smooth="true"
+            >
+              Contact us
+            </NavHashLink>
           </li>
 
           <div className="btn" id="mobile-btn">

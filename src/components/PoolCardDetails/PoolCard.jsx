@@ -1,14 +1,12 @@
-import { Link } from "react-router-dom";
-import dots from "../../assets/icons/launchpad-card-dots.svg";
-import cardBorder from "../../assets/icons/Strokes.svg";
-import cardBorder1 from "../../assets/icons/strokes1.svg";
-import percentageBar from "../../assets/icons/percentage-Bar.svg";
+import cardBorder from "../assets/icons/Strokes.svg";
+import cardBorder1 from "../assets/icons/strokes1.svg";
+import percentageBar from "../assets/icons/percentage-Bar.svg";
 import PhaseBtns from "./PhaseBtns";
 import { useState } from "react";
 
 export default function PoolCard({ pool }) {
   const [phaseId, setPhaseId] = useState("1");
-    const phases = [
+  const phases = [
     {
       id: "1",
       title: "Phase 1",
@@ -43,7 +41,12 @@ export default function PoolCard({ pool }) {
             <div className="topContent">
               <div className="buttons">
                 {phases?.map((phase) => (
-                  <PhaseBtns phase={phase} active={phase.id === phaseId} setPhaseId={setPhaseId} pool={pool[0]} />
+                  <PhaseBtns
+                    phase={phase}
+                    active={phase.id === phaseId}
+                    setPhaseId={setPhaseId}
+                    pool={pool[0]}
+                  />
                 ))}
               </div>
             </div>
@@ -69,7 +72,11 @@ export default function PoolCard({ pool }) {
               </div>
               <div className="participants">
                 <p>Status</p>
-                <h3 className={pool[0].status === "Active" ? `active-status` : ``}>{pool[0]?.status}</h3>
+                <h3
+                  className={pool[0].status === "Active" ? `active-status` : ``}
+                >
+                  {pool[0]?.status}
+                </h3>
               </div>
             </div>
             <div className="allocation-group">

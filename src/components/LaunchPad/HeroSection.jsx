@@ -1,31 +1,23 @@
 import arrowRight from "../assets/icons/arrow-right.svg";
 import heroImg from "../assets/images/launchpad/hero-img.png";
 import heroBg from "../assets/images/launchpad/hero-frame.png";
-import dash from '../assets/icons/launchpad-hero-section-dash.png';
+import dash from "../assets/icons/launchpad-hero-section-dash.png";
 
 export default function HeroSection() {
   return (
-    <section class="hero-section">
-      <img
-        class="bg"
-        src={heroBg}
-        alt="hero background"
-      />
-      {/* <div class="img-overlay"></div> */}
+    <section className="hero-section">
+      <img className="bg" src={heroBg} alt="hero background" />
 
-      <div class="hero-container">
+      <div className="hero-container">
         <div className="left-col">
-          <h1 class="hero-title">
+          <h1 className="hero-title">
             A Secure Multi-chain Launch-pad with High Staking
           </h1>
           <img src={dash} alt="dash" />
           <p>Want to raise funds with SoliMax Launchpad?</p>
           {/* HERO BTN */}
-          <button class="hero-btn">
-            <a
-              class="buy-slm-btn"
-              href="/"
-            >
+          <button className="hero-btn">
+            <a class="buy-slm-btn" href="/">
               Apply as a Project
               <img src={arrowRight} alt="arrow-right" />
             </a>

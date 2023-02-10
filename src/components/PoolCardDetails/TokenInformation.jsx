@@ -1,6 +1,5 @@
-import React from "react";
 
-export default function TokenInformation({pool}) {
+export default function TokenInformation({ pool }) {
   return (
     <div className="details token-information">
       <h1>Token Information</h1>

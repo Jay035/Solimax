@@ -1,18 +1,14 @@
-import heroBg from '../../components/assets/images/hero-frame.png';
-import arrowRight from '../../components/assets/icons/arrow-right.svg';
+import heroBg from "../../components/assets/images/hero-frame.png";
+import arrowRight from "../../components/assets/icons/arrow-right.svg";
 
 export default function HeroSection() {
   return (
-    <section class="hero-section">
-      <img
-        class="hero-bg"
-        src={heroBg}
-        alt="hero background"
-      />
-      <div class="img-overlay"></div>
+    <section className="hero-section">
+      <img className="hero-bg" src={heroBg} alt="hero background" />
+      <div className="img-overlay"></div>
 
-      <div class="hero-container">
-        <h1 class="hero-title">
+      <div className="hero-container">
+        <h1 className="hero-title">
           A Global Hub for Farmers, Degens, and Tech Geeks
         </h1>
         <p>
@@ -21,9 +17,9 @@ export default function HeroSection() {
           the community with us.”
         </p>
         {/* HERO BTN */}
-        <button class="hero-btn">
+        <button className="hero-btn">
           <a
-            class="buy-slm-btn"
+            className="buy-slm-btn"
             href="https://equalizer.exchange/swap/?outputCurrency=0x39263a476aadf768be43a99b24c4e461098524a4"
           >
             Buy SLM Now

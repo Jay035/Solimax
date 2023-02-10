@@ -805,6 +805,10 @@ footer a {
   height: 1100px;
 }
 
+.launchpad .hero-title {
+  line-height: 60px;
+}
+
 .launchpad .right-col img {
   width: 100%;
 }
@@ -812,7 +816,7 @@ footer a {
 .launchpad .buy-btns {
   display: flex;
   justify-content: start;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   gap: 15px 30px;
   background: rgba(217, 217, 217, 0.03);
@@ -821,7 +825,7 @@ footer a {
   width: 100%;
 }
 
-.launchpad .buy-btns img{
+.launchpad .buy-btns img {
   width: 100%;
   max-width: 222px;
 }
@@ -831,36 +835,37 @@ footer a {
   /* background-size: contain; */
   /* padding: 11px 0; */
   /* width: 100%; */
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
+  width: 100%;
   /* align-items: center; */
 }
 
 .launchpad .buy-btn {
-  position: absolute;
-  top: 8px;
-  padding: 3px 0;
-  margin: auto;
-  width: 88%;
-  max-width: 190px;
+  /* position: absolute;
+  top: 8px; */
+  padding: 13px 0;
+  width: 100%;
+  /* max-width: 190px; */
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: var(--white);
-  background: linear-gradient(
+  /* background: linear-gradient(
     106.23deg,
     rgba(0, 255, 255, 0.1) 6.6%,
     rgba(98, 209, 255, 0.1) 93.4%
-  );
+  ); */
+  border: 0.5px solid #374151;
 }
 
+/* .b */
+
 @media screen and (min-width: 400px) {
-  .launchpad .buy-btn{
-    top: 9px;
-  padding: 6px 0;
-  font-size: 16px;
+  .launchpad .buy-btn {
+    font-size: 16px;
   }
 }
 
@@ -889,6 +894,12 @@ footer a {
 .pools-btns a.active,
 .pools-btns a:hover {
   background: linear-gradient(
+    90.72deg,
+    rgba(107, 3, 184, 0.9) 21.79%,
+    rgba(168, 24, 186, 0.9) 54.77%,
+    rgba(226, 43, 187, 0.9) 85.69%
+  );
+  border-image: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
     rgba(168, 24, 186, 0.9) 54.77%,
@@ -929,7 +940,7 @@ footer a {
   gap: 20px;
 }
 
-.pool-card-details .hero-container{
+.pool-card-details .hero-container {
   gap: 72px;
 }
 
@@ -956,7 +967,8 @@ footer a {
   border-radius: 0px;
 }
 
-.pool-card-details .topContent button.active {
+.pool-card-details .topContent button.active,
+.buy-btn.active {
   background: #08262e;
 }
 
@@ -1129,9 +1141,9 @@ footer a {
 }
 
 .paginationBtns a {
-  padding: 10px 19px;
-  height: 62px;
-  width: 62px;
+  /* padding: 10px 19px; */
+  height: 54px;
+  width: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1160,11 +1172,11 @@ footer a {
 /* POOL CARD DETAILS PAGE */
 .pool-card-details .hero-section,
 .bg {
-  height: 1104px;
+  height: 1283px;
 }
 
-.active-status{
-  color: #08C5EA !important;
+.active-status {
+  color: #08c5ea !important;
 }
 
 .bg {
@@ -1187,8 +1199,8 @@ footer a {
 }
 
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 .pool-token-information {
@@ -1223,7 +1235,6 @@ footer a {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  /* align-items: center; */
 }
 
 .details .group div {
@@ -1231,7 +1242,6 @@ footer a {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  /* width: 100%; */
   padding: 28px 32px;
   border: 0.7px solid #374151;
 }
@@ -1243,12 +1253,6 @@ footer a {
 .group .token-address {
   padding: 18px 32px !important;
 }
-
-/* .details h1 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-} */
 
 .details h2 {
   font-weight: 400;
@@ -1321,7 +1325,7 @@ footer a {
     height: 439.9px;
   }
 
-  .completed-pool-box{
+  .completed-pool-box {
     height: 482.9px;
   }
 
@@ -1341,8 +1345,6 @@ footer a {
   .launchpad .buy-presale-btn {
     margin-top: 0;
   }
-
-
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
@@ -1486,10 +1488,6 @@ footer a {
     font-size: 13.33px;
   }
 
-  /* .pool-card-details .topContent {
-    margin-block: 30px 19px;
-  } */
-
   .pool-card-details .allocation-group {
     gap: 10px;
     margin-top: 24px;
@@ -1609,9 +1607,9 @@ footer a {
 
   .launchpad .buy-btn {
     font-size: 18px;
-    top: 15px;
     font-size: 18px;
     padding: 16px 0;
+    width: fit-content;
   }
 
   .launchpad .pools .container {
@@ -1635,7 +1633,7 @@ footer a {
     line-height: 97px;
   }
 
-  .pools .pools-btns{
+  .pools .pools-btns {
     flex-direction: row;
   }
 
@@ -1646,8 +1644,17 @@ footer a {
   }
 
   .launchpad .buy-btn {
-    padding: 10px 0;
-    top: 13.5px;
+    padding: 13px 25px;
+  }
+
+  .paginationBtns a {
+    height: 62px;
+    width: 62px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -1744,8 +1751,6 @@ footer a {
     /* grid-template-columns: repeat(2, 1fr); */
     flex-direction: row;
   }
-
-
 }
 
 @media screen and (min-width: 1300px) {

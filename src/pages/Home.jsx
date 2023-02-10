@@ -10,11 +10,8 @@ import ContractAddress from "../components/Home/ContractAddress";
 export default function Home() {
   return (
     <>
-    <HomeNavbar />
-      <main
-        id="main"
-        // class="hidden"
-      >
+      <HomeNavbar />
+      <main id="main">
         <HeroSection />
         <AboutUs />
         <Mission />

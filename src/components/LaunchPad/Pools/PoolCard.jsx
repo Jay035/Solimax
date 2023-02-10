@@ -9,22 +9,21 @@ export default function PoolCard({ pool }) {
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
         <div className="box">
-          
           {pool.tag !== "completed" && (
             <img
-            className="box-img"
-            src={cardBorder}
-            alt="box border"
-            width="100%"
-          />
+              className="box-img"
+              src={cardBorder}
+              alt="box border"
+              width="100%"
+            />
           )}
           {pool.tag === "completed" && (
             <img
-            className="box-img completed-pool-box"
-            src={cardBorder1}
-            alt="box border"
-            width="100%"
-          />
+              className="box-img completed-pool-box"
+              src={cardBorder1}
+              alt="box border"
+              width="100%"
+            />
           )}
           {/* <!--content inside the box--> */}
           <div className="fContent">

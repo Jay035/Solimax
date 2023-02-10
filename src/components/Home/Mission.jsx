@@ -1,45 +1,41 @@
-import missionBg from '../../components/assets/images/mission-bg.svg';
-import missionAsset from '../../components/assets/images/asset2.png';
+import missionBg from "../../components/assets/images/mission-bg.svg";
+import missionAsset from "../../components/assets/images/asset2.png";
 
 export default function Mission() {
   return (
-    <section class="our-mission">
-      <img
-        class="mission-bg"
-        src={missionBg}
-        alt="mission background"
-      />
-      <div class="container">
-        <h1 class="title">Our Mission</h1>
-        <div class="">
+    <section className="our-mission">
+      <img className="mission-bg" src={missionBg} alt="mission background" />
+      <div className="container">
+        <h1 className="title">Our Mission</h1>
+        <div className="">
           <p>
             “In a period where the web3 community is fearful, we at
-            <span class="bold"> Solimax</span> want to give you a reason to be
-            greedy.” Leveraging on yield farms on brands like Equalizer, we aim
-            to compensate for your attention and participation.
+            <span className="bold"> Solimax</span> want to give you a reason to
+            be greedy.” Leveraging on yield farms on brands like Equalizer, we
+            aim to compensate for your attention and participation.
           </p>
-          <div class="">
-            <span class="bold">Before;</span>
+          <div className="">
+            <span className="bold">Before;</span>
             <p>
               Community needed brands with new models to make money. Bless Defi!
             </p>
           </div>
-          <div class="">
-            <span class="bold">Now;</span>
+          <div className="">
+            <span className="bold">Now;</span>
             <p>
               Community don’t give a shit about brands, brands need the
               community.
             </p>
           </div>
-          <div class="">
-            <p class="">Like our Defi Analysts will say;</p>
+          <div className="">
+            <p className="">Like our Defi Analysts will say;</p>
             <p>
               “Since money follows innovation; SoliMax and the community will
               build innovation.”
             </p>
           </div>
           <img
-            class="mission-asset"
+            className="mission-asset"
             src={missionAsset}
             alt="our mission pics"
           />

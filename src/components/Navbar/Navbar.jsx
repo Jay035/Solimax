@@ -5,55 +5,33 @@ import navLogo from "../../components/assets/icons/nav-logo.svg";
 import { GlobalAuth } from "../../context/GlobalContext";
 import HamburgerIcon from "./HamburgerIcon";
 import NavButton from "./NavButton";
-import NavMenuList from "./NavMenuList";
 
 export default function Navbar() {
   const { menuState, setCheckboxState, setMenuState } = GlobalAuth();
 
-  // const menuItems = [
-  //   {
-  //     title: "About us",
-  //     href: "/#about-us",
-  //   },
-  //   {
-  //     title: "Tokenomics",
-  //     href: "/#tokenomics",
-  //   },
-  //   {
-  //     title: "Roadmap",
-  //     href: "/#roadmap",
-  //   },
-  //   {
-  //     title: "Launchpad",
-  //     href: "/launchpad",
-  //   },
-  //   {
-  //     title: "How to buy",
-  //     href: "/#how-to-buy",
-  //   },
-  //   {
-  //     title: "Contact us",
-  //     href: "/#contact",
-  //   },
-  // ];
-
   return (
     <header id="launchpad-header">
       <Link to="/">
-        <img class="nav-logo" src={navLogo} alt="logo" />
+        <img className="nav-logo" src={navLogo} alt="logo" />
       </Link>
 
-      <nav class="navbar">
+      <nav className="navbar">
         {/* MENU */}
-        <ul class={`menu ${menuState ? `active` : ``}`}>
-        <li
+        <ul className={`menu ${menuState ? `active` : ``}`}>
+          <li
             className="menu-item"
             onClick={() => {
               setMenuState((prevState) => !prevState);
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#about-us" activeClassName="selected" smooth>About us</NavHashLink>
+            <NavHashLink
+              to="/#about-us"
+              activeClassName="selected"
+              smooth="true"
+            >
+              About us
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -62,7 +40,13 @@ export default function Navbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#tokenomics" activeClassName="selected" smooth>Tokenomics</NavHashLink>
+            <NavHashLink
+              to="/#tokenomics"
+              activeClassName="selected"
+              smooth="true"
+            >
+              Tokenomics
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -71,7 +55,13 @@ export default function Navbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#roadmap" activeClassName="selected" smooth>Roadmap</NavHashLink>
+            <NavHashLink
+              to="/#roadmap"
+              activeClassName="selected"
+              smooth="true"
+            >
+              Roadmap
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -80,7 +70,9 @@ export default function Navbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavLink to="/launchpad" activeClassName="selected" smooth>Launchpad</NavLink>
+            <NavLink to="/launchpad" activeClassName="selected" smooth="true">
+              Launchpad
+            </NavLink>
           </li>
           <li
             className="menu-item"
@@ -89,7 +81,13 @@ export default function Navbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#how-to-buy" activeClassName="selected" smooth>How to buy</NavHashLink>
+            <NavHashLink
+              to="/#how-to-buy"
+              activeClassName="selected"
+              smooth="true"
+            >
+              How to buy
+            </NavHashLink>
           </li>
           <li
             className="menu-item"
@@ -98,7 +96,13 @@ export default function Navbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavHashLink to="/#contact" activeClassName="selected" smooth>Contact us</NavHashLink>
+            <NavHashLink
+              to="/#contact"
+              activeClassName="selected"
+              smooth="true"
+            >
+              Contact us
+            </NavHashLink>
           </li>
 
           <div className="btn" id="mobile-btn">

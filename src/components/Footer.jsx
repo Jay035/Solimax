@@ -12,19 +12,29 @@ export default function Footer() {
       {/* NAV LINKS */}
       <ul>
         <li className="menu-item">
-          <NavHashLink to="/#about-us" activeClassname="selected">About us</NavHashLink>
+          <NavHashLink to="/#about-us" activeclassname="selected">
+            About us
+          </NavHashLink>
         </li>
         <li className="menu-item">
-          <NavHashLink to="/#tokenomics" activeClassname="selected">Tokenomics</NavHashLink>
+          <NavHashLink to="/#tokenomics" activeclassname="selected">
+            Tokenomics
+          </NavHashLink>
         </li>
         <li className="menu-item">
-          <NavHashLink to="/#roadmap" activeClassname="selected">Roadmap</NavHashLink>
+          <NavHashLink to="/#roadmap" activeclassname="selected">
+            Roadmap
+          </NavHashLink>
         </li>
         <li className="menu-item">
-          <NavHashLink to="/#how-to-buy" activeClassname="selected">How to buy</NavHashLink>
+          <NavHashLink to="/#how-to-buy" activeclassname="selected">
+            How to buy
+          </NavHashLink>
         </li>
         <li className="menu-item">
-          <NavHashLink to="/#contact" activeClassname="selected">Contact us</NavHashLink>
+          <NavHashLink to="/#contact" activeclassname="selected">
+            Contact us
+          </NavHashLink>
         </li>
       </ul>
 

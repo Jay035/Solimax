@@ -2,7 +2,11 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
-import { ActivePools, UpcomingPools, CompletedPools } from "../components/LaunchPad/Pools/PoolsData";
+import {
+  ActivePools,
+  UpcomingPools,
+  CompletedPools,
+} from "../components/LaunchPad/Pools/PoolsData";
 
 const GlobalContext = createContext();
 
@@ -37,14 +41,13 @@ export function GlobalContextProvider({ children }) {
   ];
 
   const [poolsData, setPoolsData] = useState([]);
-  const [selectedPool, setSelectedPool] = useState('active');
+  const [selectedPool, setSelectedPool] = useState("active");
   // const activePools = poolsData.filter(item => item.tag === "active");
   // const upcomingPools = poolsData.filter(item => item.tag === "upcoming");
   // const completedPools = poolsData.filter(item => item.tag === "completed");
-  
 
   useEffect(() => {
-    switch(selectedPool){
+    switch (selectedPool) {
       case "active":
         setPoolsData(ActivePools);
         break;
@@ -54,11 +57,11 @@ export function GlobalContextProvider({ children }) {
       case "completed":
         setPoolsData(CompletedPools);
         break;
-        default:
-          setPoolsData(ActivePools)
+      default:
+        setPoolsData(ActivePools);
     }
     // setPoolsData(activePools);
-  }, [selectedPool])
+  }, [selectedPool]);
   //   console.log(menuItems)
 
   return (
@@ -71,7 +74,7 @@ export function GlobalContextProvider({ children }) {
         setCheckboxState,
         poolsData,
         selectedPool,
-        setSelectedPool
+        setSelectedPool,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-export default function PoolInformation({pool}) {
+export default function PoolInformation({ pool }) {
   return (
     <div className="details pool-information">
       <h1>Pool Information</h1>
