@@ -5,10 +5,11 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { GlobalContextProvider } from "./context/GlobalContext";
 import ErrorPage from "./pages/ErrorPage";
-import PoolCardDetails from "./pages/PoolCardDetails";
+// import PoolCardDetails from "./pages/PoolCardDetails";
 // const Navbar = lazy(import("./components/Navbar/Navbar"));
 const Home = lazy(() => import("./pages/Home"));
 const LaunchPad = lazy(() => import("./pages/LaunchPad"));
+const PoolCardDetails = lazy(() => import("./pages/PoolCardDetails"));
 
 function App() {
   const [loadingState, setLoadingState] = useState(true);

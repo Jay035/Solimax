@@ -19,7 +19,7 @@ export default function PoolInformation({pool}) {
           <h2 className="details-title">Token Price</h2>
           <p className="value">{pool[0]?.tokenPrice}</p>
         </div>
-        <div className="">
+        <div className="access">
           <h2 className="details-title">Access</h2>
           <p className="value">{pool[0]?.access}</p>
         </div>

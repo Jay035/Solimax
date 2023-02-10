@@ -122,8 +122,8 @@ a {
   color: var(--menu-text-color);
 }
 
-.menu-item a:hover,
-a:hover {
+/* .menu-item a:hover, */
+/* a:hover {
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -133,7 +133,7 @@ a:hover {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-}
+} */
 
 nav button a:hover {
   color: var(--menu-text-color);
@@ -190,24 +190,38 @@ nav a {
   padding-bottom: 7.5px;
 }
 
-nav a.active {
+ul a[activeclassname="selected"],
+.menu-item a,
+.active {
   position: relative;
+  /* background-color: #fff; */
 }
 
-/* nav a.active::after {
+.menu-item a::after,
+.active::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 3px;
-  width: 100%;
+  width: 0px;
+  /* width: 100%; */
   background: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
   );
-} */
+}
+
+/* .active::after{
+    width: 100% !important;
+  } */
+
+.menu-item a:hover::after,
+.menu-item a:focus::after {
+  width: 100%;
+}
 
 /* Nav button */
 .menu .btn {
@@ -339,7 +353,8 @@ section {
 }
 
 .hero-container,
-.hero-container .left-col {
+.hero-container .left-col,
+.pool-card-details .hero-container {
   display: grid;
   place-items: center;
   /* flex-direction: column; */
@@ -790,10 +805,6 @@ footer a {
   height: 1100px;
 }
 
-/* .launchpad .hero-section .bg {
-  width: 100%;
-} */
-
 .launchpad .right-col img {
   width: 100%;
 }
@@ -801,18 +812,42 @@ footer a {
 .launchpad .buy-btns {
   display: flex;
   justify-content: start;
+  /* flex-direction: column; */
   align-items: center;
-  gap: 30px;
+  gap: 15px 30px;
   background: rgba(217, 217, 217, 0.03);
   border: 0.5px solid #374151;
   padding: 52px var(--padding);
+  width: 100%;
+}
+
+.launchpad .buy-btns img{
+  width: 100%;
+  max-width: 222px;
+}
+
+.launchpad .buy-btns div {
+  /* background: url("../src/components/assets/icons/buy-btn-border.svg") no-repeat; */
+  /* background-size: contain; */
+  /* padding: 11px 0; */
+  /* width: 100%; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .launchpad .buy-btn {
-  padding: 13px 25px;
+  position: absolute;
+  top: 9.2px;
+  padding: 3px 0;
+  margin: auto;
+  width: 88%;
+  max-width: 190px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
+  text-align: center;
   color: var(--white);
   background: linear-gradient(
     106.23deg,
@@ -821,14 +856,23 @@ footer a {
   );
 }
 
+@media screen and (min-width: 400px) {
+  .launchpad .buy-btn{
+    top: 9px;
+  padding: 6px 0;
+  font-size: 16px;
+  }
+}
+
 .pools .pools-btns {
   display: flex;
   justify-content: start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   padding-block: 47px 74.1px;
 }
 
-.pools-btns > div{
+.pools-btns > div {
   display: flex;
 }
 
@@ -838,6 +882,8 @@ footer a {
   color: var(--menu-text-color);
   padding: 13px 50px;
   transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .pools-btns a.active,
@@ -854,21 +900,6 @@ footer a {
   display: grid;
   gap: 32px;
   width: 100%;
-  /* max-width: 100%; */
-}
-
-.launchpad .card-border {
-  width: 100%;
-  height: 100%;
-}
-
-.launchpad .pool-box {
-  position: relative;
-  background: url("../src/components/assets/icons/Strokes.svg") no-repeat;
-  background-size: cover;
-  height: 573px;
-  width: 100%;
-  /* display: flex; */
 }
 
 .launchpad .pool-container {
@@ -876,80 +907,120 @@ footer a {
   position: relative;
 }
 
-.pool-box .box {
-  /* position: absolute; */
-  /* top: 59%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  width: 100%;
-  /* height: 573px; */
-  /* padding-block: 30px; */
-  /* display: flex;
-  flex-direction: column; */
-}
-
-.pool-box .logo {
-  /* margin-top: 32.7px; */
-  width: 66px;
-  height: 66px;
+.box {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: rgba(217, 217, 217, 0.03);
-  border: 0.961652px solid #374151;
+  text-align: left;
 }
 
-.pool-box .box .logo-tag-component {
+.fContent {
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  padding: 46px 4px;
+}
+
+.topContent {
+  margin-block: 13px 14px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  /* align-items: center; */
   justify-content: space-between;
-  margin: 20px auto;
+  gap: 20px;
 }
 
-.logo-tag-component .tags {
+.pool-card-details .hero-container{
+  gap: 72px;
+}
+
+.pool-card-details .topContent {
+  margin-block: 5px 19px;
+}
+
+.topContent .buttons {
+  width: fit-content;
   display: flex;
-  /* justify-content: space-between; */
-  flex-direction: row;
-  gap: 7.7px;
+  gap: 7.69px;
 }
 
-.logo-tag-component .tags span {
+.pool-card-details .topContent .buttons {
+  width: 100%;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.pool-card-details .topContent button {
+  width: 100%;
+  background: transparent;
+  border: 0.5px solid #00e5ff;
+  border-radius: 0px;
+}
+
+.pool-card-details .topContent button.active {
+  background: #08262e;
+}
+
+.box button {
   text-align: center;
+  line-height: 12px;
   background: linear-gradient(
     106.23deg,
     rgba(0, 255, 255, 0.1) 221.75%,
     rgba(98, 209, 255, 0.1) 308.55%
   );
   border: 0.480826px solid #42e8e0;
-  border-radius: 38.4661px;
+  border-radius: 30px;
   color: #e5e7eb;
+  font-size: 11px;
   letter-spacing: -0.02em;
   padding: 6.73px 12.5px;
 }
 
-.project-details {
-  margin-left: 20px;
+.midContent {
+  width: 95%;
+  margin-left: auto;
 }
 
-.pool-box .project-details h1 {
+.midContent p {
+  font-size: 14px;
+  line-height: 1.7em;
+}
+
+.pool-box .logo,
+.pool-card-details .logo {
+  width: 66px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.03);
+  border: 0.961652px solid #374151;
+}
+
+.dash {
+  border: 1px dashed #00e5ff;
+  transform: rotate(-0.17deg);
+  margin-block: 32.73px 34.27px;
+}
+
+.box h3 {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
   color: #f3f4f6;
   letter-spacing: -0.02em;
 }
 
-.pool-box .project-details p,
-.project-details a {
+.box p,
+.box a {
   font-weight: 300;
-  font-size: 11.5398px;
+  font-size: 10.5px;
   line-height: 21px;
   color: #d1d5db;
 }
 
-.project-details a {
+.box a {
   color: #1592ca;
   text-decoration: underline;
 }
@@ -958,24 +1029,25 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 31.73px;
-  /* gap: 61.57px; */
+  margin-top: 17.73px;
+  width: 100%;
+  /* gap: 20px; */
 }
 
 .allocation-group div {
   display: flex;
   flex-direction: column;
   gap: 7.87px;
+  /* width: 100%; */
 }
 
 .allocation-group div p {
-  font-weight: 300;
   font-size: 10.5782px;
   line-height: 13px;
   color: var(--card-p-color);
 }
 
-.allocation-group div h1 {
+.allocation-group div h3 {
   font-weight: 500;
   font-size: 15.3864px;
   line-height: 19px;
@@ -1021,6 +1093,7 @@ footer a {
 .buy-presale-btn {
   background: #08272f;
   border: 1px solid #2166ae;
+  outline: none;
   display: flex;
   justify-content: center;
   padding-block: 13.5px;
@@ -1030,7 +1103,7 @@ footer a {
   font-size: 18px;
   line-height: 22px;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 10px;
   /* position: absolute;
   bottom: 0; */
 }
@@ -1087,7 +1160,11 @@ footer a {
 /* POOL CARD DETAILS PAGE */
 .pool-card-details .hero-section,
 .bg {
-  height: 814px;
+  height: 1104px;
+}
+
+.active-status{
+  color: #08C5EA !important;
 }
 
 .bg {
@@ -1159,6 +1236,14 @@ footer a {
   border: 0.7px solid #374151;
 }
 
+.group .access {
+  border: none !important;
+}
+
+.group .token-address {
+  padding: 18px 32px !important;
+}
+
 /* .details h1 {
   font-weight: 500;
   font-size: 24px;
@@ -1171,7 +1256,7 @@ footer a {
   line-height: 20px;
 }
 
-.details p{
+.details p {
   text-align: right;
   word-break: break-all;
 }
@@ -1192,20 +1277,130 @@ footer a {
   gap: 24px;
 }
 
-.about-project ul{
+.about-project ul {
   list-style: none;
 }
 
 .about-project p,
-.about-project li{
+.about-project li {
   line-height: 31px;
   color: var(--text-color);
 }
 
+@media screen and (min-width: 425px) {
+  .fContent {
+    top: 36px;
+  }
+
+  .topContent {
+    margin-block: 20px 21px;
+  }
+
+  .pool-box .logo,
+  .pool-card-details .logo {
+    height: 56px;
+  }
+
+  .pool-card-details .topContent {
+    margin-block: 2px 19px;
+  }
+
+  .pool-card-details .topContent button {
+    padding: 10.5px;
+  }
+
+  .dash {
+    margin-block: 43.73px 49.27px;
+  }
+
+  .box button {
+    font-size: 13.33px;
+  }
+
+  .box-img {
+    height: 439.9px;
+  }
+
+  .completed-pool-box{
+    height: 482.9px;
+  }
+
+  .box h3 {
+    font-size: 17px;
+  }
+
+  .box p,
+  .box a {
+    font-size: 11.5398px;
+  }
+
+  .allocation-group {
+    margin-top: 28px;
+  }
+
+  .launchpad .buy-presale-btn {
+    margin-top: 0;
+  }
 
 
+}
 
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .fContent {
+    top: 0;
+    padding: 37px 4px;
+  }
 
+  .topContent {
+    margin-block: 10px;
+  }
+
+  .pool-box .logo {
+    height: 40px;
+    padding-inline: 4px;
+    font-size: 10px;
+  }
+
+  .box button {
+    font-size: 8px;
+  }
+
+  .box-img {
+    height: 100%;
+  }
+
+  .box h3,
+  .allocation-group div h3 {
+    font-size: 12px;
+  }
+
+  .box p,
+  .box a,
+  .allocation-group div p {
+    font-size: 8px;
+    line-height: 12px;
+  }
+
+  .allocation-group {
+    margin-top: 12px;
+  }
+
+  .allocation-group div {
+    gap: 2px;
+  }
+
+  .buy-presale-btn {
+    margin-top: 10px;
+    font-size: 16px;
+    padding-block: 10px;
+  }
+
+  .hero-container p,
+  .hero-btn a,
+  .pool-card-details .hero-container p {
+    font-size: 18px;
+  }
+}
 
 /* ------------------------------------------------------- */
 /* TABLET SCREEN SIZES */
@@ -1255,9 +1450,57 @@ footer a {
     width: 615px;
   }
 
-  .hero-container p,
-  .hero-btn a {
+  .pool-card-details .hero-container .percentage-bar p {
+    width: fit-content;
+  }
+
+  .pool-card-details .hero-container h3 {
     font-size: 18px;
+    line-height: 50px;
+  }
+
+  .pool-card-details .hero-container p {
+    font-size: 11.5398px;
+    max-width: 600px;
+  }
+
+  .pool-card-details .hero-container a {
+    font-size: 10.5782px;
+  }
+  .pool-card-details .hero-container p,
+  .pool-card-details .box a {
+    width: 100%;
+    line-height: 20px;
+  }
+
+  .pool-card-details .fContent {
+    top: 36px;
+  }
+
+  .pool-card-details .box .logo {
+    height: 56px;
+  }
+
+  .pool-card-details .box .logo,
+  .pool-card-details .box button {
+    font-size: 13.33px;
+  }
+
+  /* .pool-card-details .topContent {
+    margin-block: 30px 19px;
+  } */
+
+  .pool-card-details .allocation-group {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .pool-card-details .allocation-group div {
+    gap: 7.87px;
+  }
+
+  .pool-card-details .allocation-group div h3 {
+    line-height: 20px;
   }
 
   /* section titles */
@@ -1360,6 +1603,17 @@ footer a {
     height: 1244px;
   }
 
+  .launchpad .buy-btns {
+    flex-direction: row;
+  }
+
+  .launchpad .buy-btn {
+    font-size: 18px;
+    top: 15px;
+    font-size: 18px;
+    padding: 16px 0;
+  }
+
   .launchpad .pools .container {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
@@ -1381,10 +1635,19 @@ footer a {
     line-height: 97px;
   }
 
+  .pools .pools-btns{
+    flex-direction: row;
+  }
+
   .details h2 {
     /* font-weight: 400; */
     font-size: 18px;
     line-height: 20px;
+  }
+
+  .launchpad .buy-btn {
+    padding: 10px 0;
+    top: 13.5px;
   }
 }
 
@@ -1392,41 +1655,6 @@ footer a {
 @media screen and (min-width: 1000px) {
   header {
     --padding: 2.5rem 7rem;
-  }
-
-  nav > .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-  }
-
-  .menu.active {
-    padding-top: 0;
-    position: unset;
-    width: 100%;
-    height: unset;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .nav-btn {
-    padding: 18px 35px;
-    font-size: 18px;
-    margin-top: 0;
-  }
-
-  #desktop-btn {
-    display: flex;
-  }
-
-  #mobile-btn {
-    display: none;
-  }
-
-  .hamburger {
-    display: none;
   }
 
   section {
@@ -1512,14 +1740,50 @@ footer a {
     font-size: 1.1em;
   }
 
-
   .pool-token-information {
     /* grid-template-columns: repeat(2, 1fr); */
     flex-direction: row;
   }
+
+
 }
 
 @media screen and (min-width: 1300px) {
+  nav > .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .menu.active {
+    padding-top: 0;
+    position: unset;
+    width: 100%;
+    height: unset;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-btn {
+    padding: 18px 35px;
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  #desktop-btn {
+    display: flex;
+  }
+
+  #mobile-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
   .img-overlay {
     top: 934px;
   }
@@ -1534,11 +1798,18 @@ footer a {
     height: 814px;
   }
 
-  .launchpad .hero-container {
+  .launchpad .hero-container,
+  .pool-card-details .hero-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 81px;
   }
 
-  .launchpad .hero-container .left-col {
+  .pool-card-details .hero-container {
+    --padding: 150px;
+  }
+
+  .launchpad .hero-container .left-col,
+  .pool-card-details .hero-container .left-col {
     place-items: start;
     text-align: left;
   }
@@ -1605,7 +1876,39 @@ footer a {
 
   .launchpad .pools .container {
     grid-template-columns: repeat(3, 1fr);
-    /* padding: 2rem; */
+    row-gap: 44px;
+  }
+
+  .launchpad .hero-section,
+  .launchpad .bg,
+  .pool-card-details .hero-section,
+  .pool-card-details .bg {
+    height: 814px;
+  }
+
+  .fContent {
+    top: 32.7px;
+  }
+
+  .topContent {
+    margin-block: 20px 30.7px;
+  }
+
+  .pool-box .logo,
+  .pool-card-details .logo {
+    height: 40px;
+  }
+
+  .box-img {
+    height: 453.9px;
+  }
+
+  .completed-pool-box {
+    height: 490.5px;
+  }
+
+  .allocation-group {
+    margin-top: 31.73px;
   }
 }
 
@@ -1646,4 +1949,8 @@ footer a {
     left: 859.5px;
     top: 718px;
   }
+
+  /* .fContent{
+    width: 70%;
+  } */
 }

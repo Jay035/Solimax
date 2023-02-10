@@ -26,7 +26,7 @@ export default function PoolCardDetails() {
   }, [poolsData]);
 
   return (
-    <div className="pool-card-details">
+    <div className="pool-card-details ">
       <Navbar />
       {pool && (
         <>

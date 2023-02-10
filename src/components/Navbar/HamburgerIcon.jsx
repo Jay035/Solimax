@@ -4,7 +4,7 @@ export default function HamburgerIcon() {
     const { checkboxState, setCheckboxState, setMenuState } = GlobalAuth(); 
     
   return (
-    <div class="hamburger">
+    <div className="hamburger">
         <input
           id="input"
           type="checkbox"

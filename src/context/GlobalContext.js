@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
-import { ActivePools, CompletedPools, UpcomingPools } from "../components/LaunchPad/Pools/PoolsData";
+import { ActivePools, UpcomingPools, CompletedPools } from "../components/LaunchPad/Pools/PoolsData";
 
 const GlobalContext = createContext();
 
@@ -38,6 +38,10 @@ export function GlobalContextProvider({ children }) {
 
   const [poolsData, setPoolsData] = useState([]);
   const [selectedPool, setSelectedPool] = useState('active');
+  // const activePools = poolsData.filter(item => item.tag === "active");
+  // const upcomingPools = poolsData.filter(item => item.tag === "upcoming");
+  // const completedPools = poolsData.filter(item => item.tag === "completed");
+  
 
   useEffect(() => {
     switch(selectedPool){
@@ -51,7 +55,7 @@ export function GlobalContextProvider({ children }) {
         setPoolsData(CompletedPools);
         break;
         default:
-          setPoolsData(ActivePools);
+          setPoolsData(ActivePools)
     }
     // setPoolsData(activePools);
   }, [selectedPool])

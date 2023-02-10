@@ -14,7 +14,7 @@ export default function Mission() {
         <div class="">
           <p>
             “In a period where the web3 community is fearful, we at
-            <span class="bold">Solimax</span> want to give you a reason to be
+            <span class="bold"> Solimax</span> want to give you a reason to be
             greedy.” Leveraging on yield farms on brands like Equalizer, we aim
             to compensate for your attention and participation.
           </p>
