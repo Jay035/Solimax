@@ -6,6 +6,9 @@ import { GlobalAuth } from "../../context/GlobalContext";
 import HamburgerIcon from "./HamburgerIcon";
 import NavButton from "./NavButton";
 import NavMenuList from "./NavMenuList";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
+
 
 export default function Navbar() {
   const { menuState, setCheckboxState, setMenuState } = GlobalAuth();
@@ -102,12 +105,12 @@ export default function Navbar() {
           </li>
 
           <div className="btn" id="mobile-btn">
-            <NavButton link="" value="Connect Wallet" />
+          <ConnectButton />
           </div>
         </ul>
       </nav>
       <div className="btn" id="desktop-btn">
-        <NavButton link="" value="Connect Wallet" />
+      <ConnectButton />
       </div>
 
       {/* MENU ICON */}
