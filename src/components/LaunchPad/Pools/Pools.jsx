@@ -18,6 +18,7 @@ export default function Pools() {
     setPageNumber(selected);
   };
 
+  console.log(poolsData)
   const titles = [
     {
       id: "active",
@@ -41,6 +42,10 @@ export default function Pools() {
         {titles.map((item) => (
           <PoolsBtn item={item} active={selectedPool === item.id} />
         ))}
+
+        {/* <PoolsBtn id="active" title="Active Pools" />
+        <PoolsBtn id="upcoming" title="Upcoming Pools" />
+        <PoolsBtn id="completed" title="Completed Pools" /> */}
       </div>
 
       <div className="container">

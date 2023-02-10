@@ -9,15 +9,18 @@ export default function PoolCard({ pool }) {
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
         <div className="box">
-          <img
+          
+          {pool.tag !== "completed" && (
+            <img
             className="box-img"
             src={cardBorder}
             alt="box border"
             width="100%"
           />
+          )}
           {pool.tag === "completed" && (
             <img
-            className="box-img"
+            className="box-img completed-pool-box"
             src={cardBorder1}
             alt="box border"
             width="100%"
@@ -52,23 +55,23 @@ export default function PoolCard({ pool }) {
               {pool?.tag === "completed" && (
                 <div className="total-rate">
                   <p>Total Rate</p>
-                  <h1>{pool?.totalRate}</h1>
+                  <h3>{pool?.totalRate}</h3>
                 </div>
               )}
               {pool?.tag !== "completed" && (
                 <div className="min-allocation">
                   <p>Min Allocation</p>
-                  <h1>{pool?.minAllocation}</h1>
+                  <h3>{pool?.minAllocation}</h3>
                 </div>
               )}
 
               <div className="max-allocation">
                 <p>Max Allocation</p>
-                <h1>{pool?.maxAllocation}</h1>
+                <h3>{pool?.maxAllocation}</h3>
               </div>
               <div className="access">
                 <p>Access</p>
-                <h1>{pool?.access}</h1>
+                <h3>{pool?.access}</h3>
               </div>
             </div>
             {pool?.tag === "completed" && (
