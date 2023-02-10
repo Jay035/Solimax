@@ -4,6 +4,7 @@ import telegramIcon from "../../assets/icons/telegram.svg";
 import radioIcon from "../../assets/icons/radio.svg";
 import webIcon from "../../assets/icons/web.svg";
 import heroBg from "../../assets/images/launchpad/hero-frame.png";
+import PoolCard from "../Pools/PoolCard";
 
 export default function HeroSection({pool}) {
     console.log(pool[0].id);
@@ -53,6 +54,7 @@ export default function HeroSection({pool}) {
           </button> */}
         </div>
         <div className="right-col">
+            <PoolCard pool={pool[0]} />
           {/* <img src={heroImg} alt="hero img" /> */}
         </div>
       </div>
