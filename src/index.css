@@ -816,6 +816,7 @@ footer a {
 .launchpad .buy-btns {
   display: flex;
   justify-content: start;
+flex-direction:column;
   align-items: center;
   gap: 30px;
   background: rgba(217, 217, 217, 0.03);
@@ -1412,6 +1413,10 @@ footer a {
   .launchpad .hero-section {
     height: 1244px;
   }
+
+.launchpad .buy-btns {
+flex-direction:row;
+}
 
   .launchpad .pools .container {
     grid-template-columns: repeat(2, 1fr);
