@@ -16,6 +16,12 @@ export default function PoolCard({ pool }) {
       title: "Phase 2",
     },
   ];
+
+  let progressValue = pool[0]?.currentBalance / pool[0]?.targetBalance;
+  let percentage = progressValue * 100;
+  percentage = percentage.toFixed(2)
+  console.log(percentage);
+
   return (
     <div key={pool[0].id} className="pool-container">
       <div className="pool-box">
@@ -54,8 +60,8 @@ export default function PoolCard({ pool }) {
             <div className="percentage-bar">
               <img src={percentageBar} alt="percentage bar" />
               <div className="">
-                <p className="percentage">{pool[0]?.percentage}</p>
-                <p className="SLM-Amt">{pool[0]?.SLMAmount}</p>
+                <p className="percentage">{percentage}%</p>
+                <p className="SLM-Amt">{pool[0]?.currentBalance}/{pool[0].targetBalance} SLM</p>
               </div>
             </div>
 

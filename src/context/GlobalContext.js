@@ -1,7 +1,6 @@
-import { useContext } from "react";
-import { useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { createContext } from "react";
-import { useState } from "react";
+import PropTypes from "prop-types";
 import {
   ActivePools,
   UpcomingPools,
@@ -84,4 +83,10 @@ export function GlobalContextProvider({ children }) {
 
 export function GlobalAuth() {
   return useContext(GlobalContext);
+}
+
+
+GlobalContextProvider.propTypes = {
+  poolProgressValue: PropTypes.number,
+  menuState: PropTypes.bool
 }
