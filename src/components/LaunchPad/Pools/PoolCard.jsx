@@ -3,8 +3,13 @@ import dots from "../../assets/icons/launchpad-card-dots.svg";
 import cardBorder from "../../assets/icons/Strokes.svg";
 import cardBorder1 from "../../assets/icons/strokes1.svg";
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
+import LaunchPoolClass from "../../../web3";
+import { useSigner } from 'wagmi'
+
 
 export default function PoolCard({ pool }) {
+  const { data: signer, isError, isLoading } = useSigner()
+  const newLaunchPool=new LaunchPoolClass("0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB","0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",1,signer)
   return (
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
@@ -86,7 +91,9 @@ export default function PoolCard({ pool }) {
         </div>
 
         {pool.tag === "active" && (
-          <button className="buy-presale-btn">Buy Presale</button>
+          <button  onClick={async ()=>{
+            await newLaunchPool.increaseAllowance("0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB","10")
+          }} className="buy-presale-btn">Buy Presale</button>
         )}
       </div>
     </div>
