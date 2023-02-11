@@ -13,7 +13,7 @@ import { useSigner } from 'wagmi'
 
 
 
-export default class LaunchPoolClass {
+export class LaunchPoolClass {
 
     constructor(address, token, tier, signer) {
         this.address = address
@@ -44,6 +44,22 @@ export default class LaunchPoolClass {
     getPhase() {
 
     }
+}
+
+export class StakingPoolClass {
+    constructor() {
+
+    }
+    //allowance
+    //stake
+    //withdraw
+    //emergency withdraw
+    //userDeposits
+    //staked Balance
+    //Reward Balance
+    //total Participant
+    //lock duration
+    //get all address of users in a pool
 }
 
 // export async function fetchByPoolByIdAndChain(id, chain) {
