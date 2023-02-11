@@ -805,10 +805,6 @@ footer a {
   height: 1100px;
 }
 
-.launchpad .hero-title {
-  line-height: 60px;
-}
-
 .launchpad .right-col img {
   width: 100%;
 }
@@ -823,6 +819,7 @@ footer a {
   border: 0.5px solid #374151;
   padding: 52px var(--padding);
   width: 100%;
+  z-index: 999999;
 }
 
 .launchpad .buy-btns img {
@@ -844,7 +841,9 @@ footer a {
 
 .launchpad .buy-btn {
   font-weight: 500;
+  width: 100%;
   font-size: 14px;
+  padding: 13px 33px;
   line-height: 22px;
   text-align: center;
   color: var(--white);
@@ -870,7 +869,7 @@ footer a {
 }
 
 .pools-btns a {
-  border: 1px solid #454fda;
+  border: 1px solid #374151;
   background: transparent;
   color: var(--menu-text-color);
   padding: 13px 50px;
@@ -887,12 +886,13 @@ footer a {
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
   );
-  border-image: linear-gradient(
+  border: transparent;
+  /* border-image: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
     rgba(168, 24, 186, 0.9) 54.77%,
     rgba(226, 43, 187, 0.9) 85.69%
-  );
+  ); */
 }
 
 .launchpad .pools .container {
@@ -1160,7 +1160,7 @@ footer a {
 /* POOL CARD DETAILS PAGE */
 .pool-card-details .hero-section,
 .bg {
-  height: 1283px;
+  height: 1115px;
 }
 
 .active-status {
@@ -1589,14 +1589,17 @@ footer a {
     height: 1244px;
   }
 
+  .launchpad .hero-title {
+    line-height: 60px !important;
+  }
+
   .launchpad .buy-btns {
     flex-direction: row;
   }
 
   .launchpad .buy-btn {
     font-size: 18px;
-    font-size: 18px;
-    padding: 16px 0;
+    /* padding: 16px 0; */
     width: fit-content;
   }
 
@@ -1629,10 +1632,6 @@ footer a {
     /* font-weight: 400; */
     font-size: 18px;
     line-height: 20px;
-  }
-
-  .launchpad .buy-btn {
-    padding: 13px 25px;
   }
 
   .paginationBtns a {
