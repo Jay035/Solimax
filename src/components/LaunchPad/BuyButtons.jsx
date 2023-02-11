@@ -5,13 +5,13 @@ export default function BuyButtons() {
     <section className="buy-btns">
       {/* <div className=""> */}
       {/* <img src={border} alt="border" /> */}
-      <a href="" className="buy-btn active">
+      <a href="#" className="buy-btn active">
         Buy on Equaliser
       </a>
       {/* </div> */}
       {/* <div className=""> */}
       {/* <img src={border} alt="border" /> */}
-      <a href="" className="buy-btn">
+      <a href="#" className="buy-btn">
         Buy on Firebird
       </a>
       {/* </div> */}

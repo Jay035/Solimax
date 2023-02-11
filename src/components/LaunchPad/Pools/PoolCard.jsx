@@ -3,13 +3,22 @@ import dots from "../../assets/icons/launchpad-card-dots.svg";
 import cardBorder from "../../assets/icons/Strokes.svg";
 import cardBorder1 from "../../assets/icons/strokes1.svg";
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
-import {LaunchPoolClass} from "../../../web3";
-import { useSigner } from 'wagmi'
-
+import { LaunchPoolClass } from "../../../web3";
+import { useSigner } from "wagmi";
 
 export default function PoolCard({ pool }) {
-  const { data: signer, isError, isLoading } = useSigner()
-  const newLaunchPool=new LaunchPoolClass("0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB","0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",1,signer)
+  let progressValue = pool?.currentBalance / pool?.targetBalance;
+  let percentage = progressValue * 100;
+  percentage = percentage.toFixed(2) + "%";
+
+  const { data: signer, isError, isLoading } = useSigner();
+  const newLaunchPool = new LaunchPoolClass(
+    "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
+    "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
+    1,
+    signer
+  );
+
   return (
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
@@ -80,9 +89,25 @@ export default function PoolCard({ pool }) {
             </div>
             {pool?.tag === "completed" && (
               <div className="percentage-bar">
-                <img src={percentageBar} alt="percentage bar" />
+                {/* <img src={percentageBar} alt="percentage bar" /> */}
+                <div
+                  class="w3-light-grey"
+                  style={{ border: "2px solid #6B7280", borderRadius: "8px" }}
+                >
+                  <div
+                    id="myBar"
+                    class="w3-container "
+                    style={{
+                      height: "24px",
+                      width: percentage,
+                      borderRadius: "4px",
+                      backgroundColor: "#2166AE",
+                      margin: "2px",
+                    }}
+                  ></div>
+                </div>
                 <div className="">
-                  <p className="percentage">{pool?.percentage}</p>
+                  <p className="percentage">{percentage}</p>
                   <p className="SLM-Amt">{pool?.SLMAmount}</p>
                 </div>
               </div>
@@ -91,9 +116,17 @@ export default function PoolCard({ pool }) {
         </div>
 
         {pool.tag === "active" && (
-          <button  onClick={async ()=>{
-            await newLaunchPool.increaseAllowance("0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB","10")
-          }} className="buy-presale-btn">Buy Presale</button>
+          <button
+            onClick={async () => {
+              await newLaunchPool.increaseAllowance(
+                "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
+                "10"
+              );
+            }}
+            className="buy-presale-btn"
+          >
+            Buy Presale
+          </button>
         )}
       </div>
     </div>
