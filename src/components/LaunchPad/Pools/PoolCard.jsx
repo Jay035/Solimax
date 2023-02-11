@@ -3,7 +3,7 @@ import dots from "../../assets/icons/launchpad-card-dots.svg";
 import cardBorder from "../../assets/icons/Strokes.svg";
 import cardBorder1 from "../../assets/icons/strokes1.svg";
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
-import LaunchPoolClass from "../../../web3";
+import {LaunchPoolClass} from "../../../web3";
 import { useSigner } from 'wagmi'
 
 
