@@ -5,9 +5,14 @@ import navLogo from "../../components/assets/icons/nav-logo.svg";
 import { GlobalAuth } from "../../context/GlobalContext";
 import HamburgerIcon from "./HamburgerIcon";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useNetwork, useSwitchNetwork } from 'wagmi'
 
 export default function Navbar() {
   const { menuState, setCheckboxState, setMenuState } = GlobalAuth();
+  const { chain } = useNetwork()
+  const { chains, error, isLoading, pendingChainId, switchNetwork } =
+    useSwitchNetwork()
+    console.log({chain})
 
   return (
     <header id="launchpad-header">
