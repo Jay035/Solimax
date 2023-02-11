@@ -5,8 +5,11 @@ import { erc20ABI } from "wagmi";
 import SolimaxLaunchPadABI from "./abi/SolimaxLaunchPad.json";
 import SolimaxIDOABI from "./abi/SolimaxIDOLocking.json"
 import { Tokens } from "./tokens";
-const { provider } = configureChains([fantom, fantomTestnet, optimism, optimismGoerli, localhost
+import { useNetwork } from "wagmi";
+import { launchPools } from "./launchPools"
+const { provider, } = configureChains([fantom, fantomTestnet, optimism, optimismGoerli, localhost
 ], [publicProvider()])
+
 
 
 
@@ -28,4 +31,8 @@ export class LauncPool {
     getPhase() {
 
     }
+}
+
+export async function fetchByPoolByIdAndChain(id, chain) {
+    return { chain, address } = launchPools.filter(e => e === id.toString())
 }
