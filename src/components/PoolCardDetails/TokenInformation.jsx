@@ -20,7 +20,7 @@ export default function TokenInformation({ pool }) {
           <h2 className="details-title">Address</h2>
           <p className="value">{pool[0]?.tokenAddress}</p>
         </div>
-        <div className="">
+        <div className="total-supply">
           <h2 className="details-title">Total Supply</h2>
           <p className="value">{pool[0]?.tokenTotalSupply}</p>
         </div>

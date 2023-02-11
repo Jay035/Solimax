@@ -1244,7 +1244,8 @@ footer a {
   border: 0.7px solid #374151;
 }
 
-.group .access {
+.group .access,
+.group .total-supply {
   border: none !important;
 }
 
@@ -1884,6 +1885,10 @@ footer a {
   #how-to-buy .card.step-four {
     padding-right: 154px;
   }
+
+  .group .token-address {
+    padding: 28px 32px !important;
+}
 
   .launchpad .pools .container {
     grid-template-columns: repeat(3, 1fr);
