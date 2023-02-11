@@ -1,7 +1,9 @@
 import { ethers } from "ethers";
 import { createClient, configureChains, mainnet } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
-
+import { erc20ABI } from "wagmi";
+import SolimaxLaunchPadABI from "./abi/SolimaxLaunchPad.json";
+import SolimaxIDOABI from "./abi/SolimaxIDOLocking.json"
 const { provider } = configureChains([fantom, fantomTestnet, optimism, optimismGoerli, localhost
 ], [publicProvider()])
 
