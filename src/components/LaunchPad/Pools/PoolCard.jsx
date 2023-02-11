@@ -5,6 +5,10 @@ import cardBorder1 from "../../assets/icons/strokes1.svg";
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
 
 export default function PoolCard({ pool }) {
+  let progressValue = pool?.currentBalance / pool?.targetBalance;
+  let percentage = progressValue * 100;
+  percentage = percentage.toFixed(2) + "%";
+
   return (
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
@@ -75,9 +79,25 @@ export default function PoolCard({ pool }) {
             </div>
             {pool?.tag === "completed" && (
               <div className="percentage-bar">
-                <img src={percentageBar} alt="percentage bar" />
+                {/* <img src={percentageBar} alt="percentage bar" /> */}
+                <div
+                  class="w3-light-grey"
+                  style={{ border: "2px solid #6B7280", borderRadius: "8px" }}
+                >
+                  <div
+                    id="myBar"
+                    class="w3-container "
+                    style={{
+                      height: "24px",
+                      width: percentage,
+                      borderRadius: "4px",
+                      backgroundColor: "#2166AE",
+                      margin: "2px",
+                    }}
+                  ></div>
+                </div>
                 <div className="">
-                  <p className="percentage">{pool?.percentage}</p>
+                  <p className="percentage">{percentage}</p>
                   <p className="SLM-Amt">{pool?.SLMAmount}</p>
                 </div>
               </div>

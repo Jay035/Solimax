@@ -816,7 +816,7 @@ footer a {
   align-items: center;
   gap: 15px 30px;
   background: rgba(217, 217, 217, 0.03);
-  border: 0.5px solid #374151;
+  /* border: 0.5px solid #374151; */
   padding: 52px var(--padding);
   width: 100%;
   z-index: 999999;
@@ -850,6 +850,11 @@ footer a {
   border: 0.5px solid #374151;
 }
 
+.buy-btn.active,
+.buy-btn:hover {
+  border-color: var(--white);
+}
+
 @media screen and (min-width: 400px) {
   .launchpad .buy-btn {
     font-size: 16px;
@@ -861,7 +866,9 @@ footer a {
   justify-content: start;
   flex-direction: column;
   /* flex-wrap: wrap; */
-  padding-block: 47px 74.1px;
+  border: 1px solid #374151;
+
+  margin-block: 47px 74.1px;
 }
 
 .pools-btns > div {
@@ -869,7 +876,7 @@ footer a {
 }
 
 .pools-btns a {
-  border: 1px solid #374151;
+  border-top: 1px solid #374151;
   background: transparent;
   color: var(--menu-text-color);
   padding: 13px 50px;
@@ -887,6 +894,7 @@ footer a {
     rgba(226, 43, 187, 0.9) 85.69%
   );
   border: transparent;
+  border-bottom: 0;
   /* border-image: linear-gradient(
     90.72deg,
     rgba(107, 3, 184, 0.9) 21.79%,
@@ -933,7 +941,7 @@ footer a {
 }
 
 .pool-card-details .topContent {
-  margin-block: 5px 19px;
+  margin-block: 5px 14px;
 }
 
 .topContent .buttons {
@@ -955,8 +963,7 @@ footer a {
   border-radius: 0px;
 }
 
-.pool-card-details .topContent button.active,
-.buy-btn.active {
+.pool-card-details .topContent button.active {
   background: #08262e;
 }
 
@@ -1069,6 +1076,9 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 9px;
+}
+
+.launchpad .percentage-bar{
   margin-top: 29.13px;
 }
 
@@ -1160,7 +1170,7 @@ footer a {
 /* POOL CARD DETAILS PAGE */
 .pool-card-details .hero-section,
 .bg {
-  height: 1115px;
+  height: 1344px;
 }
 
 .active-status {
@@ -1302,7 +1312,7 @@ footer a {
   }
 
   .dash {
-    margin-block: 43.73px 49.27px;
+    margin-block: 43.73px 46px;
   }
 
   .box button {
@@ -1626,6 +1636,11 @@ footer a {
 
   .pools .pools-btns {
     flex-direction: row;
+    border: none;
+  }
+
+  .pools-btns a {
+    border: 1px solid #374151;
   }
 
   .details h2 {
@@ -1737,6 +1752,10 @@ footer a {
   .pool-token-information {
     /* grid-template-columns: repeat(2, 1fr); */
     flex-direction: row;
+  }
+
+  .dash {
+    margin-block: 43.73px 49.27px;
   }
 }
 
