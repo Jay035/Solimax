@@ -1290,6 +1290,28 @@ footer a {
   color: var(--text-color);
 }
 
+
+/* ------------------------------------------------------------------ */
+/* Staking page */
+.staking input{
+  border: 1px solid var(--white);
+  color: var(--white);
+  outline: none;
+  padding: 13px 20px;
+  width: 300px;
+  font-size: 17px;
+  border-radius: 40px;
+  background: transparent;
+}
+
+.staking .hero-btn{
+  width: 200px;
+}
+
+.staking .hero-btn a{
+  padding-block: 10px;
+}
+
 @media screen and (min-width: 425px) {
   .fContent {
     top: 36px;
