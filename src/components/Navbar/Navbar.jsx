@@ -86,6 +86,17 @@ export default function Navbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
+            <NavLink to="/launchpad/staking" activeClassName="selected" smooth="true">
+              Staking
+            </NavLink>
+          </li>
+          <li
+            className="menu-item"
+            onClick={() => {
+              setMenuState((prevState) => !prevState);
+              setCheckboxState((prevState) => !prevState);
+            }}
+          >
             <NavHashLink
               to="/#how-to-buy"
               activeClassName="selected"
