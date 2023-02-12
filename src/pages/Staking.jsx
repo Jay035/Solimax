@@ -35,11 +35,18 @@ export default function Staking() {
     toast.error("Stake amount is not Set")
   }
   }
+
+  async function WithDraw(){
+    await StakingPool.withDraw().then(res=>{
+      console.log({res})
+    }).catch(err=>{
+      toast.error(err.error.data.message)
+     // console.log((err.error.data.message))
+    })
+  }
   useEffect(() => {
     if(chain){  
-      const allowanceAmount=StakingPool.checkAllowance().then(res=>{
-        console.log({res})
-      })
+      
      // console.log(allowanceAmount)
      if(chain.id!==4002){
        toast.error("THIS POOL EXIST ON ANOTHER CHAIN")
@@ -55,6 +62,9 @@ export default function Staking() {
       <div className="hero-section">
       <ToastContainer />
         <div className="hero-container">
+        <div>
+          Staking Balance:{}
+        </div>
           <input onChange={(e)=>{
              setAmount(e.target.value)
           }} type="number" placeholder="Input stake amount" />
@@ -64,8 +74,10 @@ export default function Staking() {
           }} type="submit" className="hero-btn">
             <a href="#">Stake</a>
           </button>
-          <button type="submit" className="hero-btn">
-            <a href="">WithDraw</a>
+          <button onClick={()=>{
+            WithDraw()
+          }} type="submit" className="hero-btn">
+            <a href="#">WithDraw</a>
           </button>
         </div>
       </div>

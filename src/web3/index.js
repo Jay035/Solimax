@@ -99,7 +99,7 @@ export class StakingPoolClass {
     //userDeposits
     async userDeposits() {
         const user = await this.getUserAddress()
-        return await this.provider.callStatic.functions.userDeposits(user);
+        return await this.contractWithProvider.callStatic.userDeposits(user);
     }
     //staked Balance
     async stakedBalance() {
