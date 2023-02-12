@@ -10,6 +10,7 @@ export default function PoolCard({ pool }) {
   let progressValue = pool?.currentBalance / pool?.targetBalance;
   let percentage = progressValue * 100;
   percentage = percentage.toFixed(2) + "%";
+
   return (
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
@@ -107,19 +108,17 @@ export default function PoolCard({ pool }) {
         </div>
 
         {pool.tag === "active" && (
-           <Link to={`/launchpad/pool/${pool.id}`}>
-          <button
+          // <button
             // onClick={async () => {
             //   await newLaunchPool.increaseAllowance(
             //     "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
             //     "10"
             //   );
             // }}
-            className="buy-presale-btn"
-          >
-           View More
-          </button>
-          </Link>
+            
+          // >
+            <Link to={`/launchpad/pool/${pool.id}`} className="buy-presale-btn">View More</Link>
+          // </button>
         )}
       </div>
     </div>

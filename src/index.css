@@ -219,7 +219,8 @@ ul a[activeclassname="selected"],
   } */
 
 .menu-item a:hover::after,
-.menu-item a:focus::after {
+.menu-item a:focus::after,
+.menu-item a:active::after {
   width: 100%;
 }
 
@@ -1100,6 +1101,16 @@ footer a {
   line-height: 11px;
 }
 
+.pool-box input{
+  width: 100%;
+  background: transparent;
+  margin-top: 4px;
+  color: var(--white);
+  font-size: 18px;
+  padding: 2px;
+  text-align: center;
+}
+
 .buy-presale-btn {
   background: #08272f;
   border: 1px solid #2166ae;
@@ -1775,6 +1786,7 @@ footer a {
   .pool-token-information {
     /* grid-template-columns: repeat(2, 1fr); */
     flex-direction: row;
+    margin-top: 4rem;
   }
 
   .dash {
