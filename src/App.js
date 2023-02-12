@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import { GlobalContextProvider } from "./context/GlobalContext";
 import ErrorPage from "./pages/ErrorPage";
+import Staking from "./pages/Staking";
 // import PoolCardDetails from "./pages/PoolCardDetails";
 // const Navbar = lazy(import("./components/Navbar/Navbar"));
 const Home = lazy(() => import("./pages/Home"));
@@ -44,6 +45,7 @@ function App() {
               />
               <Route path="/launchpad" element={<LaunchPad />} />
               <Route path="/launchpad/pool/:id" element={<PoolCardDetails />} />
+              <Route path="/launchpad/pool/staking" element={<Staking />} />
               {/* when a user goes to a non-existent route */}
               <Route path="*" element={<ErrorPage />} />
             </Routes>
