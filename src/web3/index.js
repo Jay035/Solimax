@@ -97,8 +97,9 @@ export class StakingPoolClass {
         return receipt
     }
     //userDeposits
-    async userDeposits(walletAddress) {
-        return await this.provider.callStatic.functions.userDeposits(walletAddress);
+    async userDeposits() {
+        const user = await this.getUserAddress()
+        return await this.provider.callStatic.functions.userDeposits(user);
     }
     //staked Balance
     async stakedBalance() {
