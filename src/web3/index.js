@@ -52,8 +52,13 @@ export class LaunchPoolClass {
         const result = await this.contract.functions.saleStart();
         return result.toString()
     }
-    async checkAllowance(owner, spender) {
-        const result = await this.contractWithProvider.functions.allowance(owner.toString(), spender.toString());
+    async getUserAddress() {
+        return await this.signer.getAddress()
+    }
+    async checkAllowance() {
+        const contract = new ethers.Contract(this.token, IERC20.abi, this.provider);
+        const result = await contract.functions.allowance(this.getUserAddress.toString(), this.address);
+        return result
     }
 }
 
@@ -63,6 +68,8 @@ export class StakingPoolClass {
         this.token = token
         this.signer = signer
         this.provider = provider
+        this.contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.signer)
+        this.contractWithProvider = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.provider)
     }
     //allowance
     async increaseAllowance(spender, amount) {
@@ -73,54 +80,55 @@ export class StakingPoolClass {
     }
     //stake
     async stake(amount) {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.signer);
-        const tx = await contract.functions.stake(amount.toString());
+        const tx = await this.contract.functions.stake(amount.toString());
         const receipt = await tx.wait();
         return receipt
     }
     //withdraw
     async withDraw() {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.signer);
-        const tx = await contract.functions.withdraw();
+        const tx = await this.contract.functions.withdraw();
         const receipt = await tx.wait();
         return receipt
     }
     //emergency withdraw
     async emergencyWithdraw() {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.signer);
-        const tx = await contract.functions.emergencyWithdraw();
+        const tx = await this.contract.functions.emergencyWithdraw();
         const receipt = await tx.wait();
         return receipt
     }
     //userDeposits
     async userDeposits(walletAddress) {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.provider);
-        return await contract.callStatic.functions.userDeposits(walletAddress);
+        return await this.provider.callStatic.functions.userDeposits(walletAddress);
     }
     //staked Balance
     async stakedBalance() {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.provider);
-        return await contract.callStatic.functions.stakedBalance();
+        return await this.contractWithProvider.callStatic.stakedBalance();
 
     }
     //Reward Balance
     async RewardBalance() {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.provider);
-        return await contract.callStatic.functions.rewardBalance();
+        return await this.contractWithProvider.callStatic.rewardBalance();
     }
     //total Participant
     async totalParticipant() {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.provider);
-        return await contract.callStatic.functions.totalParticipants();
+        return await this.contractWithProvider.callStatic.totalParticipants();
     }
     //lock duration
     async lockDuration() {
-        const contract = new ethers.Contract(this.address, SolimaxIDOABI.abi, this.provider);
-        return await contract.functions.lockDuration();
+        return await this.contractWithProvider.callStatic.lockDuration();
     }
     //get all address of users in a pool
     async getAllAddress() {
-        const totalNoOfPart = await this.totalParticipant()
+        return await this.contractWithProvider.callStatic.totalParticipant()
+    }
+    async getUserAddress() {
+        return await this.signer.getAddress()
+    }
+    async checkAllowance() {
+        const contract = new ethers.Contract(this.token, IERC20.abi, this.provider);
+        const user = await this.getUserAddress()
+        const result = await contract.functions.allowance(user, this.address);
+        return result.toString()
     }
 }
 
