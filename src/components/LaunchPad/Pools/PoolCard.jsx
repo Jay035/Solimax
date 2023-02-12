@@ -10,15 +10,6 @@ export default function PoolCard({ pool }) {
   let progressValue = pool?.currentBalance / pool?.targetBalance;
   let percentage = progressValue * 100;
   percentage = percentage.toFixed(2) + "%";
-
-  const { data: signer, isError, isLoading } = useSigner();
-  const newLaunchPool = new LaunchPoolClass(
-    "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
-    "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
-    1,
-    signer
-  );
-
   return (
     <div key={pool.id} className="pool-container">
       <div className="pool-box">
@@ -61,7 +52,7 @@ export default function PoolCard({ pool }) {
 
               <p>
                 {pool?.projectDescription}{" "}
-                <Link to={`/launchpad/pool/${pool.id}`}> Read more</Link>
+                {/* <Link to={`/launchpad/pool/${pool.id}`}> Read more</Link> */}
               </p>
             </div>
             <div className="allocation-group">
@@ -116,17 +107,19 @@ export default function PoolCard({ pool }) {
         </div>
 
         {pool.tag === "active" && (
+           <Link to={`/launchpad/pool/${pool.id}`}>
           <button
-            onClick={async () => {
-              await newLaunchPool.increaseAllowance(
-                "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
-                "10"
-              );
-            }}
+            // onClick={async () => {
+            //   await newLaunchPool.increaseAllowance(
+            //     "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
+            //     "10"
+            //   );
+            // }}
             className="buy-presale-btn"
           >
-            Buy Presale
+           View More
           </button>
+          </Link>
         )}
       </div>
     </div>
