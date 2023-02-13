@@ -49,11 +49,11 @@ export default function PoolCard({ pool }) {
 
   useEffect(() => {
     newLaunchPool.getTierDetails().then((res) => {
-      console.log(res);
+      console.log({tier:res});
       setTierDetails(res);
     });
     newLaunchPool.getSaleEnd().then((res) => {
-      // console.log(parseInt(res.toString()))
+       console.log({date:parseInt(res.toString())})
       var myDate = new Date(parseInt(res.toString()));
       console.log(myDate.toLocaleString());
       setSaleEnd(myDate.toLocaleString());
@@ -63,7 +63,7 @@ export default function PoolCard({ pool }) {
       if (chain.id !== pool.chain) {
         toast.error("THIS POOL EXIST ON ANOTHER CHAIN");
         //console.log(pool[0].chain)
-        //switchNetwork?.(parseInt(pool[0].chain))
+        switchNetwork?.(parseInt(pool[0].chain))
       }
     }
   }, []);
