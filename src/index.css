@@ -1117,6 +1117,7 @@ footer a {
   border: 1px solid #2166ae;
   outline: none;
   display: flex;
+  max-width: 420px;
   justify-content: center;
   padding-block: 13.5px;
   align-items: center;
@@ -1950,9 +1951,9 @@ footer a {
     height: 40px;
   } */
 
-  .box-img {
+  /* .box-img {
     height: 453.9px;
-  }
+  } */
 
   .completed-pool-box {
     height: 490.5px;
