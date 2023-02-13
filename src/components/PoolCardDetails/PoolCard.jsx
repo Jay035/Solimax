@@ -203,7 +203,7 @@ export default function PoolCard({ pool }) {
         </div>
         <input
           type="number"
-          placeholder="0"
+          placeholder="Enter SLM Amount"
           // value={amountToBuy}
           onChange={(e) => {
             console.log(e.target.value);

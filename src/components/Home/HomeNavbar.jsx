@@ -56,7 +56,7 @@ export default function HomeNavbar() {
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavLink to="/launchpad/staking" activeClassName="selected" smooth="true">
+            <NavLink to="/launchpad/staking" activeclassName="selected" smooth="true">
               Staking
             </NavLink>
           </li>
