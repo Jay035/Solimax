@@ -10,6 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { createClient, configureChains } from "wagmi";
 import { useNetwork, useSwitchNetwork } from "wagmi";
+import { convertEthersToWei, convertweiToEthers } from "../../web3/priceOracle";
 import {
   mainnet,
   optimism,
@@ -28,6 +29,7 @@ export default function PoolCard({ pool }) {
   const { chain } = useNetwork();
   const { chains, error, pendingChainId, switchNetwork } = useSwitchNetwork();
   const [phaseId, setPhaseId] = useState("1");
+  const currentDate=Date.now()
   const [amountToBuy, setAmountToBuy] = useState(0);
   const [tierDetails, setTierDetails] = useState({
     maxTierCap: 0,
@@ -37,6 +39,7 @@ export default function PoolCard({ pool }) {
     users: 0,
   });
   const [saleEnd, setSaleEnd] = useState(0);
+  const [saleStart, setSaleStart] = useState(0);
   const { data: signer, isError, isLoading } = useSigner();
   // console.log(chain.id)
   const newLaunchPool = new LaunchPoolClass(
@@ -49,52 +52,59 @@ export default function PoolCard({ pool }) {
 
   useEffect(() => {
     newLaunchPool.getTierDetails().then((res) => {
-      console.log({tier:res});
+      //console.log({tier:res});
       setTierDetails(res);
     });
     newLaunchPool.getSaleEnd().then((res) => {
-       console.log({date:parseInt(res.toString())})
+     //  console.log({date:parseInt(res.toString())})
       var myDate = new Date(parseInt(res.toString()));
       console.log(myDate.toLocaleString());
       setSaleEnd(myDate.toLocaleString());
     });
-
+    newLaunchPool.getSaleStart().then((res) => {
+       console.log({date:parseInt(res.toString())})
+     var myDate = new Date(parseInt(res.toString()));
+    // console.log(myDate.toLocaleString());
+     setSaleStart(res.toString());
+   });
+   newLaunchPool.checkAllowance().then(res=>{
+    console.log({res})
+   })
     if (chain) {
-      if (chain.id !== pool.chain) {
+      if (chain.id !== pool[0].chain) {
         toast.error("THIS POOL EXIST ON ANOTHER CHAIN");
-        //console.log(pool[0].chain)
+        console.log(pool[0].chain,chain.id)
         switchNetwork?.(parseInt(pool[0].chain))
       }
     }
   }, []);
 
-  async function validatedMinimumAndMaximumAmount(amount) {
-    const { maxUserCap, minUserCap } = tierDetails;
-    const val = parseFloat(amount);
-    if (val > parseFloat(maxUserCap)) {
-      alert("YOu can buy more than" + maxUserCap);
-    } else if (val < parseFloat(minUserCap)) {
-      alert("You can buy less than " + minUserCap);
-    }
-  }
   async function BuyPresale() {
+   
+    if(parseInt(saleStart)<currentDate/1000){
+    const value=convertEthersToWei(amountToBuy.toString(),18)
+    toast.success("Allowance Success");
     newLaunchPool
-      .increaseAllowance(amountToBuy.toString())
+      .increaseAllowance(value.toString())
       .then((res) => {
         toast.success("Allowance Success");
-        toast.loading("Buying Presale Token");
+        toast.success("Buying Presale Token");
         newLaunchPool
-          .buyTokens(amountToBuy.toString())
+          .buyTokens(value.toString())
           .then((res) => {
             toast.success("Presale Token Bought");
           })
           .catch((err) => {
-            toast.error("Buying Error Occurred");
+            toast.error(err.error.data.message);
           });
       })
       .catch((err) => {
-        toast.error("ERROR OCCURED IN ALLOWANCE");
+        console.log({err})
+        toast.error(err.error.data.message);
       });
+    }else{
+      toast.error("Launch Has not Started Yet")
+    }
   }
 
   const phases = [
@@ -178,7 +188,7 @@ export default function PoolCard({ pool }) {
             <div className="allocation-group">
               <div className="total-raised">
                 <p>Total Raised</p>
-                <h3>{tierDetails?.amountRaised}</h3>
+                <h3>{convertweiToEthers(tierDetails?.amountRaised,18)}</h3>
               </div>
               <div className="participants">
                 <p>Participants</p>
