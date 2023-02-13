@@ -79,7 +79,7 @@ export default function Navbar() {
               Launchpad
             </NavLink>
           </li>
-          <li
+          {/* <li
             className="menu-item"
             onClick={() => {
               setMenuState((prevState) => !prevState);
@@ -89,7 +89,7 @@ export default function Navbar() {
             <NavLink to="/launchpad/staking" activeClassName="selected" smooth="true">
               Staking
             </NavLink>
-          </li>
+          </li> */}
           <li
             className="menu-item"
             onClick={() => {
