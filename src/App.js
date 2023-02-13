@@ -45,7 +45,7 @@ function App() {
               />
               <Route path="/launchpad" element={<LaunchPad />} />
               <Route path="/launchpad/pool/:id" element={<PoolCardDetails />} />
-              <Route path="/launchpad/pool/staking" element={<Staking />} />
+              <Route path="/launchpad/staking" element={<Staking />} />
               {/* when a user goes to a non-existent route */}
               <Route path="*" element={<ErrorPage />} />
             </Routes>
