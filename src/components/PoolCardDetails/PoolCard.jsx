@@ -178,7 +178,7 @@ export default function PoolCard({ pool }) {
               <div className="">
                 <p className="percentage">{percentage}</p>
                 <p className="SLM-Amt">
-                  {pool[0]?.currentBalance}/{pool[0].targetBalance} SLM
+                  {pool[0]?.currentBalance}/{pool[0].targetBalance} DAI
                 </p>
               </div>
             </div>
