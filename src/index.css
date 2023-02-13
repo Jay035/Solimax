@@ -1104,10 +1104,11 @@ footer a {
 .pool-box input{
   width: 100%;
   background: transparent;
+  border: 1px solid #2166ae;
   margin-top: 4px;
   color: var(--white);
   font-size: 18px;
-  padding: 2px;
+  padding: 13.5px 2px;
   text-align: center;
 }
 
@@ -1116,6 +1117,7 @@ footer a {
   border: 1px solid #2166ae;
   outline: none;
   display: flex;
+  max-width: 420px;
   justify-content: center;
   padding-block: 13.5px;
   align-items: center;
@@ -1944,14 +1946,14 @@ footer a {
     margin-block: 20px 30.7px;
   }
 
-  .pool-box .logo,
+  /* .pool-box .logo,
   .pool-card-details .logo {
     height: 40px;
-  }
+  } */
 
-  .box-img {
+  /* .box-img {
     height: 453.9px;
-  }
+  } */
 
   .completed-pool-box {
     height: 490.5px;

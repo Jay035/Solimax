@@ -9,7 +9,7 @@ export default function HamburgerIcon() {
         id="input"
         type="checkbox"
         checked={checkboxState ? `checked` : ``}
-        onClick={() => {
+        onChange={() => {
           setMenuState((prevState) => !prevState);
           setCheckboxState((prevState) => !prevState);
         }}

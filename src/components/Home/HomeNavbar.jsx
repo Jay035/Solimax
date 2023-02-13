@@ -49,17 +49,17 @@ export default function HomeNavbar() {
               Tokenomics
             </NavHashLink>
           </li>
-          <li
+          {/* <li
             className="menu-item"
             onClick={() => {
               setMenuState((prevState) => !prevState);
               setCheckboxState((prevState) => !prevState);
             }}
           >
-            <NavLink to="/launchpad/staking" activeClassName="selected" smooth="true">
+            <NavLink to="/launchpad/staking" activeclassName="selected" smooth="true">
               Staking
             </NavLink>
-          </li>
+          </li> */}
           <li
             className="menu-item"
             onClick={() => {

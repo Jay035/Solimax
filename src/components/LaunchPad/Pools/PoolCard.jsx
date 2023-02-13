@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import dots from "../../assets/icons/launchpad-card-dots.svg";
 import cardBorder from "../../assets/icons/Strokes.svg";
 import cardBorder1 from "../../assets/icons/strokes1.svg";
+import DAILogo from '../../assets/icons/dai-logo.png';
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
 import { LaunchPoolClass } from "../../../web3";
 import { useSigner } from "wagmi";
@@ -36,7 +37,8 @@ export default function PoolCard({ pool }) {
             {/* <!--begin top contents--> */}
             <img src={dots} alt="dots" width="39.31px" />
             <div className="topContent">
-              <div className="logo">{pool?.logo}</div>
+              {/* <div className="logo">{pool?.logo}</div> */}
+              <img className="logo" src={DAILogo} alt="logo" />
               <div className="buttons">
                 {pool.tags?.map((tag, index) => (
                   <button key={index} className="btn">
