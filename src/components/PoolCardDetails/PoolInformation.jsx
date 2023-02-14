@@ -35,7 +35,7 @@ export default function PoolInformation({ pool }) {
   }, [])
   
   const newLaunchPool = new LaunchPoolClass(
-    "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
+    "0x11E3a64e14fe06a146eEaDb040Adc7AAb005671C",
     "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
     1,
     signer,
