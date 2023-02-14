@@ -43,7 +43,7 @@ export default function PoolCard({ pool }) {
   const { data: signer, isError, isLoading } = useSigner();
   // console.log(chain.id)
   const newLaunchPool = new LaunchPoolClass(
-    "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
+    "0x11E3a64e14fe06a146eEaDb040Adc7AAb005671C",
     "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
     1,
     signer,
@@ -118,7 +118,7 @@ export default function PoolCard({ pool }) {
     },
   ];
 
-  let progressValue = pool[0]?.currentBalance / pool[0]?.targetBalance;
+  let progressValue = convertweiToEthers(tierDetails?.amountRaised,18) / convertweiToEthers(pool[0]?.targetBalance,18);
   let percentage = progressValue * 100;
   percentage = percentage.toFixed(2) + "%";
 
@@ -178,7 +178,7 @@ export default function PoolCard({ pool }) {
               <div className="">
                 <p className="percentage">{percentage}</p>
                 <p className="SLM-Amt">
-                  {pool[0]?.currentBalance}/{pool[0].targetBalance} DAI
+                  {convertweiToEthers(tierDetails?.amountRaised,18)}/{convertweiToEthers(pool[0].targetBalance,18)} DAI
                 </p>
               </div>
             </div>
