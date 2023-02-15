@@ -35,7 +35,7 @@ export default function PoolCard({ pool }) {
     "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
     1,
     signer,
-    new ethers.providers.JsonRpcProvider(chain?.rpcUrls.default.http[0])
+    new ethers.providers.JsonRpcProvider("https://fantom-testnet.public.blastapi.io")
   );
   function poolChain(chains){
     // console.log(pool.chain)
