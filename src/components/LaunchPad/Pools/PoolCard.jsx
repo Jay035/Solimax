@@ -6,11 +6,57 @@ import DAILogo from '../../assets/icons/dai-logo.png';
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
 import { LaunchPoolClass } from "../../../web3";
 import { useSigner } from "wagmi";
+import { useState,useEffect } from "react";
+import { Chain } from "wagmi";
+import { ethers } from "ethers";
+import { useNetwork, useSwitchNetwork } from "wagmi";
+import { convertweiToEthers } from "../../../web3/priceOracle";
+
 
 export default function PoolCard({ pool }) {
+  const { chain } = useNetwork();
+  const [cChain,setCChain]=useState(chain)
+  const { chains, error, pendingChainId, switchNetwork } = useSwitchNetwork();
+  const [tierDetails, setTierDetails] = useState({
+    maxTierCap: 0,
+    minUserCap: 0,
+    maxUserCap: 0,
+    amountRaised: 0,
+    users: 0,
+  });
   let progressValue = pool?.currentBalance / pool?.targetBalance;
   let percentage = progressValue * 100;
   percentage = percentage.toFixed(2) + "%";
+  const { data: signer, isError, isLoading } = useSigner();
+  
+  // console.log(chain.id)
+  const newLaunchPool = new LaunchPoolClass(
+    "0x11E3a64e14fe06a146eEaDb040Adc7AAb005671C",
+    "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
+    1,
+    signer,
+    new ethers.providers.JsonRpcProvider(chain?.rpcUrls.default.http[0])
+  );
+  function poolChain(chains){
+    // console.log(pool.chain)
+     return  chains.filter(x=>x.id===pool[0].chain)
+   }
+//    const getBlockTime=async ()=>{
+//     const RPC = chain.rpcUrls.default.http[0];
+// const blockNumber = new ethers.providers.JsonRpcProvider(RPC).getBlockNumber(); // number of the block you want to get timestamp of
+// const provider = new ethers.providers.JsonRpcProvider(RPC)
+// const timestamp = (await provider.getBlock(blockNumber)).timestamp;
+// console.log(timestamp)
+//    }
+
+  useEffect(() => {
+  //getBlockTime()
+    newLaunchPool.getTierDetails().then((res) => {
+      console.log({tier:res});
+      setTierDetails(res);
+    });
+  }, [])
+
 
   return (
     <div key={pool.id} className="pool-container">
@@ -68,13 +114,13 @@ export default function PoolCard({ pool }) {
               {pool?.tag !== "completed" && (
                 <div className="min-allocation">
                   <p>Min Allocation</p>
-                  <h3>{pool?.minAllocation}</h3>
+                  <h3>{convertweiToEthers(tierDetails.minUserCap)}</h3>
                 </div>
               )}
 
               <div className="max-allocation">
                 <p>Max Allocation</p>
-                <h3>{pool?.maxAllocation}</h3>
+                <h3>{convertweiToEthers(tierDetails.maxUserCap)}</h3>
               </div>
               <div className="access">
                 <p>Access</p>
