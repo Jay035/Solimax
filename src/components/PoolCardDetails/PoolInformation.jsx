@@ -39,7 +39,7 @@ export default function PoolInformation({ pool }) {
     "0x2Fd8894A7F280cE00C362ef1BB51d9B0F42c5931",
     1,
     signer,
-    new ethers.providers.JsonRpcProvider(cChain?.rpcUrls.default.http[0])
+    new ethers.providers.JsonRpcProvider("https://fantom-testnet.public.blastapi.io")
   );
   return (
     <div className="details pool-information">
