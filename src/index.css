@@ -866,7 +866,6 @@ footer a {
   display: flex;
   justify-content: start;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   border: 1px solid #374151;
 
   margin-block: 47px 74.1px;
@@ -928,6 +927,10 @@ footer a {
   position: absolute;
   top: 0;
   padding: 46px 4px;
+}
+
+.fContent.completed {
+  top: -1px;
 }
 
 .topContent {
@@ -1039,14 +1042,12 @@ footer a {
   justify-content: space-between;
   margin-top: 17.73px;
   width: 100%;
-  /* gap: 20px; */
 }
 
 .allocation-group div {
   display: flex;
   flex-direction: column;
   gap: 7.87px;
-  /* width: 100%; */
 }
 
 .allocation-group div p {
@@ -1056,8 +1057,7 @@ footer a {
 }
 
 .allocation-group div h3 {
-  font-weight: 500;
-  font-size: 15.3864px;
+  font-size: 14px;
   line-height: 19px;
   color: var(--card-text-color);
 }
@@ -1079,19 +1079,22 @@ footer a {
   gap: 9px;
 }
 
-.launchpad .percentage-bar{
-  margin-top: 29.13px;
+.launchpad .percentage-bar {
+  margin-top: 12px;
 }
 
 .percentage-bar > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-direction: column; */
 }
 
 .percentage-bar > div h1 {
   color: var(--card-text-color);
+}
+
+.bar {
+  height: 17px;
 }
 
 .percentage-bar p {
@@ -1101,7 +1104,7 @@ footer a {
   line-height: 11px;
 }
 
-.pool-box input{
+.pool-box input {
   width: 100%;
   background: transparent;
   border: 1px solid #2166ae;
@@ -1126,9 +1129,7 @@ footer a {
   font-size: 18px;
   line-height: 22px;
   width: 100%;
-  margin-top: 10px;
-  /* position: absolute;
-  bottom: 0; */
+  margin-top: 16px;
 }
 
 /* PAGINATION */
@@ -1171,13 +1172,11 @@ footer a {
 }
 
 .paginationBtns a:hover {
-  /* color: #fff; */
   background: #454fda;
 }
 
 .paginationActive a {
   background: #454fda;
-  /* color: #fff; */
 }
 
 /* POOL CARD DETAILS PAGE */
@@ -1303,10 +1302,9 @@ footer a {
   color: var(--text-color);
 }
 
-
 /* ------------------------------------------------------------------ */
 /* Staking page */
-.staking input{
+.staking input {
   border: 1px solid var(--white);
   color: var(--white);
   outline: none;
@@ -1317,17 +1315,21 @@ footer a {
   background: transparent;
 }
 
-.staking .hero-btn{
+.staking .hero-btn {
   width: 200px;
 }
 
-.staking .hero-btn a{
+.staking .hero-btn a {
   padding-block: 10px;
 }
 
 @media screen and (min-width: 425px) {
   .fContent {
-    top: 36px;
+    top: 14px;
+  }
+
+  .fContent.completed {
+    top: 17px;
   }
 
   .topContent {
@@ -1355,13 +1357,13 @@ footer a {
     font-size: 13.33px;
   }
 
-  .box-img {
+  /* .box-img {
     height: 439.9px;
-  }
+  } */
 
-  .completed-pool-box {
+  /* .completed-pool-box {
     height: 482.9px;
-  }
+  } */
 
   .box h3 {
     font-size: 17px;
@@ -1376,9 +1378,9 @@ footer a {
     margin-top: 28px;
   }
 
-  .launchpad .buy-presale-btn {
+  /* .launchpad .buy-presale-btn {
     margin-top: 0;
-  }
+  } */
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
@@ -1387,8 +1389,16 @@ footer a {
     padding: 37px 4px;
   }
 
+  .fContent.completed {
+    top: -5px;
+  }
+
   .topContent {
     margin-block: 10px;
+  }
+
+  .completed .topContent {
+    margin-block: 10px 0;
   }
 
   .pool-box .logo {
@@ -1791,6 +1801,10 @@ footer a {
     margin-top: 4rem;
   }
 
+  .bar {
+    height: 24px;
+  }
+
   .dash {
     margin-block: 43.73px 49.27px;
   }
@@ -1924,7 +1938,7 @@ footer a {
 
   .group .token-address {
     padding: 28px 32px !important;
-}
+  }
 
   .launchpad .pools .container {
     grid-template-columns: repeat(3, 1fr);
@@ -1939,11 +1953,19 @@ footer a {
   }
 
   .fContent {
-    top: 32.7px;
+    top: 0;
+  }
+
+  .fContent.completed {
+    top: 0;
   }
 
   .topContent {
-    margin-block: 20px 30.7px;
+    margin-block: 20px;
+  }
+
+  .pool-box .logo {
+    height: 48px;
   }
 
   /* .pool-box .logo,
@@ -1955,12 +1977,15 @@ footer a {
     height: 453.9px;
   } */
 
-  .completed-pool-box {
+  /* .completed-pool-box {
     height: 490.5px;
-  }
+  } */
 
   .allocation-group {
-    margin-top: 31.73px;
+    margin-top: 20px;
+  }
+  .bar {
+    height: 17px;
   }
 }
 
@@ -2002,7 +2027,23 @@ footer a {
     top: 718px;
   }
 
-  /* .fContent{
-    width: 70%;
-  } */
+  .fContent {
+    top: 32.7px;
+  }
+
+  .topContent {
+    margin-block: 20px 30.7px;
+  }
+
+  .fContent.completed {
+    top: 17px;
+  }
+
+  .allocation-group {
+    margin-top: 31.73px;
+  }
+
+  .bar {
+    height: 24px;
+  }
 }

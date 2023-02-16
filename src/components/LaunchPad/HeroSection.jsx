@@ -17,7 +17,10 @@ export default function HeroSection() {
           <p>Want to raise funds with SoliMax Launchpad?</p>
           {/* HERO BTN */}
           <button className="hero-btn">
-            <a class="buy-slm-btn" href="https://egx10b579vb.typeform.com/to/MrD6iduN">
+            <a
+              class="buy-slm-btn"
+              href="https://egx10b579vb.typeform.com/to/MrD6iduN"
+            >
               Apply as a Project
               <img src={arrowRight} alt="arrow-right" />
             </a>

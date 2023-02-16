@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import dots from "../../assets/icons/launchpad-card-dots.svg";
 import cardBorder from "../../assets/icons/Strokes.svg";
 import cardBorder1 from "../../assets/icons/strokes1.svg";
-import DAILogo from '../../assets/icons/dai-logo.png';
+import DAILogo from "../../assets/icons/dai-logo.png";
 import percentageBar from "../../assets/icons/percentage-Bar.svg";
 import { LaunchPoolClass } from "../../../web3";
 import { useSigner } from "wagmi";
@@ -33,7 +33,9 @@ export default function PoolCard({ pool }) {
             />
           )}
           {/* <!--content inside the box--> */}
-          <div className="fContent">
+          <div
+            className={`fContent ${pool.tag === "completed" && `completed`}`}
+          >
             {/* <!--begin top contents--> */}
             <img src={dots} alt="dots" width="39.31px" />
             <div className="topContent">
@@ -85,14 +87,13 @@ export default function PoolCard({ pool }) {
               <div className="percentage-bar">
                 {/* <img src={percentageBar} alt="percentage bar" /> */}
                 <div
-                  class="w3-light-grey"
+                  className="w3-light-grey"
                   style={{ border: "2px solid #6B7280", borderRadius: "8px" }}
                 >
                   <div
                     id="myBar"
-                    class="w3-container "
+                    className="bar"
                     style={{
-                      height: "24px",
                       width: percentage,
                       borderRadius: "4px",
                       backgroundColor: "#2166AE",
@@ -111,15 +112,17 @@ export default function PoolCard({ pool }) {
 
         {pool.tag === "active" && (
           // <button
-            // onClick={async () => {
-            //   await newLaunchPool.increaseAllowance(
-            //     "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
-            //     "10"
-            //   );
-            // }}
-            
+          // onClick={async () => {
+          //   await newLaunchPool.increaseAllowance(
+          //     "0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB",
+          //     "10"
+          //   );
+          // }}
+
           // >
-            <Link to={`/launchpad/pool/${pool.id}`} className="buy-presale-btn">View More</Link>
+          <Link to={`/launchpad/pool/${pool.id}`} className="buy-presale-btn">
+            View More
+          </Link>
           // </button>
         )}
       </div>
