@@ -15,7 +15,7 @@ import { convertweiToEthers } from "../../../web3/priceOracle";
 
 export default function PoolCard({ pool }) {
   const { chain } = useNetwork();
-  const [cChain,setCChain]=useState(chain)
+  const [cChain,setCChain] = useState(chain);
   const { chains, error, pendingChainId, switchNetwork } = useSwitchNetwork();
   const [tierDetails, setTierDetails] = useState({
     maxTierCap: 0,

@@ -696,7 +696,6 @@ section {
 #how-to-buy .card p {
   color: var(--text-color);
   font-weight: 400;
-  font-size: 16px;
   line-height: 26px;
 }
 
@@ -812,7 +811,7 @@ footer a {
 
 .launchpad .buy-btns {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   gap: 15px 30px;
@@ -864,7 +863,7 @@ footer a {
 
 .pools .pools-btns {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   border: 1px solid #374151;
 
@@ -1500,10 +1499,10 @@ footer a {
     width: fit-content;
   }
 
-  .pool-card-details .hero-container h3 {
+  /* .pool-card-details .hero-container h3 {
     font-size: 18px;
     line-height: 50px;
-  }
+  } */
 
   .pool-card-details .hero-container p {
     font-size: 11.5398px;
@@ -1984,6 +1983,7 @@ footer a {
   .allocation-group {
     margin-top: 20px;
   }
+  
   .bar {
     height: 17px;
   }
@@ -1993,13 +1993,14 @@ footer a {
   #about-us .card {
     justify-content: end;
   }
+
   #about-us .card-1 {
     height: 462px;
     padding-top: 103px;
   }
 
   #about-us .card-3 {
-    place-self: start;
+    place-self: flex-start;
   }
 
   #about-us .card-2,
